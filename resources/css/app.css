@@ -1,0 +1,121 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+        --font-sans: 'Montserrat', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+                'Segoe UI Symbol', 'Noto Color Emoji';
+
+        /* Brand palette (user provided) */
+        --brand-1: #3c4c62; /* deep blue-gray */
+        --brand-2: #fbae2e; /* amber */
+        --brand-3: #1f5c2e; /* deep green */
+        --brand-4: #c46440; /* warm terracotta */
+        --brand-5: #c9252c; /* vivid red */
+}
+
+/* Custom helpers */
+.custom-h-16 {
+        height: calc(var(--spacing) * 24); /* reduced hero header height */
+}
+
+/* Theme helper classes using the brand palette */
+:root {
+        --brand-1: var(--brand-1);
+        --brand-2: var(--brand-2);
+        --brand-3: var(--brand-3);
+        --brand-4: var(--brand-4);
+        --brand-5: var(--brand-5);
+}
+
+.text-brand { color: var(--brand-1) !important; }
+.text-brand-2 { color: var(--brand-2) !important; }
+.text-cta { color: #ffffff !important; }
+.hover\:text-cta:hover { color: var(--brand-5) !important; }
+.bg-brand { background-color: var(--brand-1) !important; }
+.bg-cta { background-color: var(--brand-5) !important; }
+.btn-book { background-color: var(--brand-5); color: #fff; }
+.btn-book:hover { background-color: color-mix(in srgb, var(--brand-5) 85%, black 15%); }
+.btn-book-outline {
+        border: 2px solid #ffffff;
+        color: #ffffff;
+        background-color: transparent;
+        border-radius: 0;
+        transition: background-color 200ms ease, color 200ms ease;
+}
+.btn-book-outline:hover {
+        background-color: #ffffff;
+        color: var(--brand-1);
+}
+
+.btn-book-solid {
+        background-color: #ffffff;
+        color: #05030a;
+        border: 2px solid #ffffff;
+        border-radius: 0;
+        transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+.btn-book-solid:hover {
+        background-color: transparent;
+        color: #ffffff;
+        border-color: #ffffff;
+}
+
+.site-header {
+        background-color: transparent;
+        transition: background 250ms ease, box-shadow 250ms ease;
+}
+.hero-header .header-link {
+        color: #ffffff;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 0.65rem;
+        transition: color 200ms ease;
+}
+.hero-header .header-link:hover {
+        color: var(--brand-2);
+}
+.hero-header .header-toggle {
+        color: #ffffff;
+        transition: color 200ms ease;
+}
+.hero-header .header-toggle:hover {
+        color: var(--brand-2);
+}
+.header-divider {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+.site-header--standard {
+        background: linear-gradient(90deg, #05030a 0%, #1a1a24 100%);
+        box-shadow: 0 12px 24px rgba(6, 6, 12, 0.35);
+}
+.site-header--standard .header-link {
+        color: #ffffff;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 0.72rem;
+        transition: color 200ms ease;
+}
+.site-header--standard .header-link:hover {
+        color: var(--brand-2);
+}
+.site-header--standard .header-toggle {
+        color: #ffffff;
+        transition: color 200ms ease;
+}
+.site-header--standard .header-toggle:hover {
+        color: var(--brand-2);
+}
+
+/* Dropdown / overlay helpers */
+.overlay-dark { background-color: rgba(0,0,0,0.7); }

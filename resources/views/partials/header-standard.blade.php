@@ -1,9 +1,14 @@
-<header class="site-header site-header--standard w-full fixed top-0 left-0 z-50">
-    <div class="max-w-15xl mx-auto px-6 sm:px-8 lg:px-12">
+@php
+    $additionalClasses = $class ?? '';
+    $headerClasses = trim("site-header site-header--standard w-full sticky top-0 z-50 {$additionalClasses}");
+@endphp
+
+<header class="{{ $headerClasses }}" data-standard-header>
+    <div class="max-w-15xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="header-standard">
-            <div class="flex items-center justify-between gap-4 py-2 lg:py-3">
+            <div class="flex items-center justify-between gap-3 py-0.5 lg:py-1">
                 <a href="/" class="inline-flex items-center flex-shrink-0">
-                    <img src="{{ asset('images/logo3.png') }}" alt="Experience Udawalawa" class="w-24 md:w-28 lg:w-32 object-contain">
+                    <img src="{{ asset('images/logo3.png') }}" alt="Experience Udawalawa" class="w-14 md:w-16 lg:w-20 object-contain">
                     <span class="sr-only">Experience Udawalawa</span>
                 </a>
                 <nav class="hidden lg:flex flex-1 items-center justify-center gap-8 text-xs uppercase tracking-[0.22em]">
@@ -39,4 +44,6 @@
     </div>
 
 </header>
-@include('partials.nav-overlay')
+@unless(!empty($withoutOverlay))
+    @include('partials.nav-overlay')
+@endunless

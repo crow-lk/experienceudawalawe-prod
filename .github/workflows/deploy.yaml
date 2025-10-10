@@ -4,7 +4,7 @@ on:
   push:
     branches:
       #Develop environment 2
-      - develop
+      - main
 
 jobs:
   deploy:

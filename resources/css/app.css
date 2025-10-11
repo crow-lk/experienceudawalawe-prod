@@ -122,6 +122,10 @@
         animation: spin 12s linear infinite;
 }
 
+.animate-spin-slower {
+        animation: spin 24s linear infinite;
+}
+
 .hero-header .group:hover .header-link,
 .hero-header .group:focus-within .header-link {
         color: var(--brand-2);

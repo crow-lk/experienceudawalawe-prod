@@ -27,9 +27,9 @@
         </div>
     </section>
 
-    @include('partials.header-standard', ['withoutOverlay' => true])
+    @include('partials.header-standard', ['class' => 'hidden', 'withoutOverlay' => true])
 
-    <section class="bg-white py-16 lg:py-20">
+    <section class="bg-white py-16 lg:py-20" data-header-anchor>
         <div class="mx-auto max-w-4xl space-y-6 px-6 text-center">
             <p class="text-xs uppercase tracking-[0.4em] text-[#b3b1ac]">Welcome to Experience Udawalawe</p>
             <p class="text-base leading-relaxed text-[#50504d] sm:text-lg">Welcome to Experience Udawalawe, where Sri Lanka's cultural heritage, community spirit, and wild beauty come together in one unforgettable journey. From village kitchens and spice gardens to tranquil lake rides and safaris through Udawalawe National Park, every experience is rooted in authenticity and respect for nature.</p>

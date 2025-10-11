@@ -1,4 +1,4 @@
-<header class="site-header hero-header w-full absolute top-0 left-0 z-50">
+<header class="site-header hero-header w-full absolute top-0 left-0 z-50" data-hero-header>
     <div class="max-w-15xl mx-auto px-6 sm:px-8 lg:px-12">
         <div class="header-hero">
             <div class="grid items-center min-h-[100px] lg:min-h-[100px]" style="grid-template-columns: 1fr auto 1fr;">

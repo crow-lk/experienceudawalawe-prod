@@ -8,13 +8,13 @@
                         <a href="{{ route('about') }}" class="header-link text-[9px] transition-colors">About</a>
                         <div class="relative group">
                             <a href="{{ route('experiences.index') }}" class="header-link text-[9px] transition-colors">Experiences</a>
-                            <div class="absolute left-0 top-full hidden group-hover:block bg-white/95 text-brand rounded shadow-lg py-2 w-64 z-20">
-                                <a href="{{ route('experiences.index') }}#culinary" class="block px-4 py-2 text-[11px] text-brand hover:bg-brand hover:text-white transition-colors">Culinary Journeys</a>
-                                <a href="{{ route('experiences.index') }}#wildlife" class="block px-4 py-2 text-[11px] text-brand hover:bg-brand hover:text-white transition-colors">Wildlife &amp; Nature</a>
-                                <a href="{{ route('experiences.index') }}#culture" class="block px-4 py-2 text-[11px] text-brand hover:bg-brand hover:text-white transition-colors">Culture &amp; Village Life</a>
-                                <a href="{{ route('experiences.index') }}#sustainability" class="block px-4 py-2 text-[11px] text-brand hover:bg-brand hover:text-white transition-colors">Sustainability &amp; Community</a>
-                                <a href="{{ route('experiences.show', 'cooking-class') }}" class="block px-4 py-2 text-[11px] text-brand hover:bg-brand hover:text-white transition-colors">Individual Experiences</a>
-                            </div>
+                        <div class="absolute left-0 top-full hidden group-hover:block bg-black/60 text-white backdrop-blur-md border border-white/10 shadow-lg w-64 z-20">
+                            <a href="{{ route('experiences.index') }}#culinary" class="block px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-white transition-colors hover:bg-white/15">Culinary Journeys</a>
+                            <a href="{{ route('experiences.index') }}#wildlife" class="block px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-white transition-colors hover:bg-white/15">Wildlife &amp; Nature</a>
+                            <a href="{{ route('experiences.index') }}#culture" class="block px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-white transition-colors hover:bg-white/15">Culture &amp; Village Life</a>
+                            <a href="{{ route('experiences.index') }}#sustainability" class="block px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-white transition-colors hover:bg-white/15">Sustainability &amp; Community</a>
+                            <a href="{{ route('experiences.show', 'cooking-class') }}" class="block px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-white transition-colors hover:bg-white/15">Individual Experiences</a>
+                        </div>
                         </div>
                         <a href="{{ route('sustainability') }}" class="header-link text-[9px] whitespace-nowrap transition-colors">Sustainability</a>
                         <a href="{{ route('stories.index') }}" class="header-link text-[9px] transition-colors">Stories</a>

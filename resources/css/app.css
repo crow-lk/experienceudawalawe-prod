@@ -118,4 +118,13 @@
 }
 
 /* Dropdown / overlay helpers */
+.animate-spin-slow {
+        animation: spin 12s linear infinite;
+}
+
+.hero-header .group:hover .header-link,
+.hero-header .group:focus-within .header-link {
+        color: var(--brand-2);
+}
+
 .overlay-dark { background-color: rgba(0,0,0,0.7); }

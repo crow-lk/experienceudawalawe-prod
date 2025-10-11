@@ -43,11 +43,9 @@
                 </div>
             </div>
             <div class="flex flex-1 flex-col border-t border-[#e6e3da] px-4 py-2 md:border-t-0 md:border-l md:px-6 md:py-2">
-                <span class="text-[11px] font-semibold uppercase tracking-[0.35em] text-[#3c4c62]">Check In - Check Out</span>
-                <div class="mt-1 flex items-center gap-2 text-xs text-[#1b1b18] md:flex-nowrap">
-                    <input type="date" name="check_in" class="w-[130px] bg-transparent text-[#1b1b18] focus:outline-none">
-                    <span class="text-[#9a9994]">to</span>
-                    <input type="date" name="check_out" class="w-[130px] bg-transparent text-[#1b1b18] focus:outline-none">
+                <span class="text-[11px] font-semibold uppercase tracking-[0.35em] text-[#3c4c62]">Preferred Date</span>
+                <div class="mt-1 flex items-center text-xs text-[#1b1b18]">
+                    <input type="date" name="preferred_date" class="w-[160px] bg-transparent text-[#1b1b18] focus:outline-none">
                 </div>
             </div>
             <div class="flex flex-1 flex-col border-t border-[#e6e3da] px-4 py-2 md:border-t-0 md:border-l md:px-6 md:py-2">
@@ -68,7 +66,7 @@
                 <input type="text" name="promo" placeholder="Optional" class="mt-1 bg-transparent text-xs text-[#1b1b18] focus:outline-none">
             </div>
             <div class="flex border-t border-[#e6e3da] px-4 py-2 md:border-t-0 md:border-l md:px-6 md:py-2">
-                <button type="submit" class="h-full min-h-[44px] w-full bg-[#3c4c62] px-5 text-xs font-semibold uppercase tracking-[0.25em] text-white transition hover:bg-[#2f3d4e] md:w-[140px]">
+                <button type="submit" class="h-full min-h-[44px] w-full bg-[#3c4c62] px-5 text-xs font-semibold uppercase tracking-[0.15em] text-white transition hover:bg-[#2f3d4e] md:w-[140px]">
                     Book Now
                 </button>
             </div>
@@ -78,10 +76,25 @@
     @include('partials.header-standard', ['class' => 'hidden', 'withoutOverlay' => true])
 
     <section class="bg-white py-16 lg:py-20" data-header-anchor>
-        <div class="mx-auto max-w-4xl space-y-6 px-6 text-center">
-            <p class="text-xs uppercase tracking-[0.4em] text-[#b3b1ac]">Welcome to Experience Udawalawe</p>
-            <p class="text-base leading-relaxed text-[#50504d] sm:text-lg">Welcome to Experience Udawalawe, where Sri Lanka's cultural heritage, community spirit, and wild beauty come together in one unforgettable journey. From village kitchens and spice gardens to tranquil lake rides and safaris through Udawalawe National Park, every experience is rooted in authenticity and respect for nature.</p>
-            <p class="text-base leading-relaxed text-[#50504d] sm:text-lg">Guided by our commitment to regenerative tourism, your visit supports local livelihoods, protects biodiversity, and preserves traditions. Here, travel becomes more than discovery, it becomes belonging.</p>
+        <div class="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 lg:flex-row lg:items-center">
+            <div class="lg:w-1/2 space-y-6 text-left">
+                <div class="space-y-4">
+                    <p class="text-xs uppercase tracking-[0.4em] text-[#b3b1ac]">Welcome to</p>
+                    <h2 class="mt-3 text-4xl font-semibold tracking-tight text-[#1b1b18] sm:text-5xl">Experience Udawalawe</h2>
+                    <div class="flex items-center gap-4">
+                        <div class="h-px flex-1 bg-[#c7c3b7]"></div>
+                        <img src="{{ asset('images/elements/rorate-flower.png') }}" alt="Experience motif" class="h-28 w-28 animate-spin-slow object-contain opacity-80" loading="lazy">
+                        <div class="h-px flex-1 bg-[#c7c3b7]"></div>
+                    </div>
+                </div>
+                <p class="text-sm leading-relaxed text-[#50504d] sm:text-base">Welcome to Experience Udawalawe, where Sri Lanka's cultural heritage, community spirit, and wild beauty come together in one unforgettable journey. From village kitchens and spice gardens to tranquil lake rides and safaris through Udawalawe National Park, every experience is rooted in authenticity and respect for nature.</p>
+                <p class="text-sm leading-relaxed text-[#50504d] sm:text-base">Guided by our commitment to regenerative tourism, your visit supports local livelihoods, protects biodiversity, and preserves traditions. Here, travel becomes more than discovery, it becomes belonging.</p>
+            </div>
+            <div class="lg:w-1/2">
+                <div class="overflow-hidden border border-[#ecebe5] shadow-sm">
+                    <img src="{{ asset('images/logosample.png') }}" alt="Experience Udawalawe montage" class="aspect-[4/3] w-full object-cover" loading="lazy">
+                </div>
+            </div>
         </div>
     </section>
 

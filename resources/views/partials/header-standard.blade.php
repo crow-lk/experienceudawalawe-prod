@@ -16,11 +16,13 @@
                     <div class="relative group">
                         <a href="{{ route('experiences.index') }}" class="header-link transition-colors">Experiences</a>
                         <div class="absolute left-1/2 top-full hidden -translate-x-1/2 group-hover:block bg-white/95 text-brand rounded shadow-lg py-2 w-64 z-20">
-                            <a href="{{ route('experiences.index') }}#culinary" class="block px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-brand hover:bg-brand hover:text-white transition">Culinary Journeys</a>
-                            <a href="{{ route('experiences.index') }}#wildlife" class="block px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-brand hover:bg-brand hover:text-white transition">Wildlife &amp; Nature</a>
-                            <a href="{{ route('experiences.index') }}#culture" class="block px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-brand hover:bg-brand hover:text-white transition">Culture &amp; Village Life</a>
-                            <a href="{{ route('experiences.index') }}#sustainability" class="block px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-brand hover:bg-brand hover:text-white transition">Sustainability &amp; Community</a>
-                            <a href="{{ route('experiences.show', 'safari-tour') }}" class="block px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-brand hover:bg-brand hover:text-white transition">Individual Pages</a>
+                            <a href="{{ route('experiences.index') }}" class="block px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-brand hover:bg-brand hover:text-white transition">All Experiences</a>
+                            @if(isset($headerExperiences) && $headerExperiences->count() > 0)
+                                <div class="border-t border-brand/10 my-1"></div>
+                                @foreach($headerExperiences->take(4) as $experience)
+                                    <a href="{{ route('experiences.show', $experience->slug) }}" class="block px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-brand hover:bg-brand hover:text-white transition">{{ $experience->title }}</a>
+                                @endforeach
+                            @endif
                         </div>
                     </div>
                     <a href="{{ route('sustainability') }}" class="header-link transition-colors">Sustainability</a>

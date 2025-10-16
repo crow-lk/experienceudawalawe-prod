@@ -1,11 +1,10 @@
 <?php
 
 use App\Http\Controllers\ExperienceController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 // Experience routes
 Route::get('/experiences', [ExperienceController::class, 'index'])->name('experiences.index');

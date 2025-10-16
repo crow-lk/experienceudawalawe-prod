@@ -46,11 +46,12 @@
                             <div class="space-y-3">
                                 <a href="{{ route('experiences.index') }}" class="block text-lg font-semibold tracking-wide hover:text-brand transition">Experiences</a>
                                 <div class="pl-6 border-l border-white/10 space-y-2 text-sm text-white/70">
-                                    <a href="{{ route('experiences.index') }}#culinary" class="hover:text-white transition">Culinary Journeys</a>
-                                    <a href="{{ route('experiences.index') }}#wildlife" class="hover:text-white transition">Wildlife &amp; Nature</a>
-                                    <a href="{{ route('experiences.index') }}#culture" class="hover:text-white transition">Culture &amp; Village Life</a>
-                                    <a href="{{ route('experiences.index') }}#sustainability" class="hover:text-white transition">Sustainability &amp; Community</a>
-                                    <a href="{{ route('experiences.show', 'cooking-class') }}" class="hover:text-white transition">Individual Experience Pages</a>
+                                    <a href="{{ route('experiences.index') }}" class="hover:text-white transition">All Experiences</a>
+                                    @if(isset($headerExperiences) && $headerExperiences->count() > 0)
+                                        @foreach($headerExperiences->take(6) as $experience)
+                                            <a href="{{ route('experiences.show', $experience->slug) }}" class="hover:text-white transition">{{ $experience->title }}</a>
+                                        @endforeach
+                                    @endif
                                 </div>
                             </div>
 
@@ -83,11 +84,15 @@
 
                     <div class="space-y-8">
                         <div>
-                            <p class="text-xs uppercase tracking-[0.35em] text-white/50">Featured Experiences</p>
+                            <p class="text-xs uppercase tracking-[0.35em] text-white/50">Available Experiences</p>
                             <ul class="mt-4 space-y-3 text-sm text-white/70">
-                                <li><a href="{{ route('experiences.show', 'cooking-class') }}" class="hover:text-white transition">Ceylon Spice Atelier</a></li>
-                                <li><a href="{{ route('experiences.show', 'lake-activities') }}" class="hover:text-white transition">Sunrise Lake Drifts</a></li>
-                                <li><a href="{{ route('experiences.show', 'village-walks') }}" class="hover:text-white transition">Village Hearth Evenings</a></li>
+                                @if(isset($headerExperiences) && $headerExperiences->count() > 0)
+                                    @foreach($headerExperiences->take(3) as $experience)
+                                        <li><a href="{{ route('experiences.show', $experience->slug) }}" class="hover:text-white transition">{{ $experience->title }}</a></li>
+                                    @endforeach
+                                @else
+                                    <li class="text-white/50">No experiences available</li>
+                                @endif
                             </ul>
                         </div>
 

@@ -10,6 +10,32 @@
             <section class="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
                 <form class="space-y-6 rounded-2xl border border-[#ecebe5] bg-white p-8 shadow-sm">
                     <p class="text-xs uppercase tracking-[0.35em] text-[#b3b1ac]">Contact Form</p>
+                    
+                    @if($selectedExperience)
+                        <div class="rounded-lg border border-[#f53003]/20 bg-[#f53003]/5 p-4">
+                            <div class="flex items-start gap-3">
+                                <div class="flex h-8 w-8 items-center justify-center rounded-full bg-[#f53003] text-white">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <p class="text-sm font-semibold text-[#1b1b18]">Experience Selected: {{ $selectedExperience->title }}</p>
+                                    <p class="text-xs text-[#50504d] mt-1">{{ $selectedExperience->short_summary }}</p>
+                                    @if(!empty($formData['preferred_date']))
+                                        <p class="text-xs text-[#50504d] mt-2"><strong>Preferred Date:</strong> {{ $formData['preferred_date'] }}</p>
+                                    @endif
+                                    @if(!empty($formData['adults']) || !empty($formData['children']))
+                                        <p class="text-xs text-[#50504d]">
+                                            <strong>Guests:</strong> 
+                                            {{ $formData['adults'] ?? 2 }} adults
+                                            @if(!empty($formData['children'])) + {{ $formData['children'] }} children @endif
+                                        </p>
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+                    @endif
                     <div class="grid gap-4 md:grid-cols-2">
                         <label class="space-y-2 text-sm text-[#1b1b18]">
                             <span>Name</span>
@@ -31,8 +57,10 @@
                     <label class="space-y-2 text-sm text-[#1b1b18]">
                         <span>Purpose</span>
                         <select name="purpose" class="w-full rounded border border-[#d7d5cf] bg-[#FDFDFC] px-3 py-2 text-sm text-[#50504d] focus:border-[#f53003] focus:outline-none focus:ring-1 focus:ring-[#f53003]">
-                            <option selected disabled>Choose an option</option>
-                            <option>Book an experience</option>
+                            @if(!$selectedExperience)
+                                <option selected disabled>Choose an option</option>
+                            @endif
+                            <option {{ $selectedExperience ? 'selected' : '' }}>Book an experience</option>
                             <option>Accommodation inquiry</option>
                             <option>Partnership or media</option>
                             <option>Volunteer or research</option>
@@ -41,8 +69,26 @@
                     </label>
                     <label class="space-y-2 text-sm text-[#1b1b18]">
                         <span>Message</span>
-                        <textarea name="message" rows="5" class="w-full rounded border border-[#d7d5cf] bg-[#FDFDFC] px-3 py-2 text-sm text-[#50504d] focus:border-[#f53003] focus:outline-none focus:ring-1 focus:ring-[#f53003]" placeholder="Tell us about your travel hopes, dates, or ideas."></textarea>
+                        <textarea name="message" rows="5" class="w-full rounded border border-[#d7d5cf] bg-[#FDFDFC] px-3 py-2 text-sm text-[#50504d] focus:border-[#f53003] focus:outline-none focus:ring-1 focus:ring-[#f53003]" placeholder="Tell us about your travel hopes, dates, or ideas.">@if($selectedExperience)I'm interested in booking "{{ $selectedExperience->title }}"@if($formData['preferred_date']) for {{ $formData['preferred_date'] }}@endif. @endif</textarea>
                     </label>
+
+                    @if($selectedExperience)
+                        <!-- Hidden fields to preserve booking information -->
+                        <input type="hidden" name="selected_experience" value="{{ $selectedExperience->slug }}">
+                        <input type="hidden" name="experience_title" value="{{ $selectedExperience->title }}">
+                        @if($formData['preferred_date'])
+                            <input type="hidden" name="preferred_date" value="{{ $formData['preferred_date'] }}">
+                        @endif
+                        @if($formData['adults'])
+                            <input type="hidden" name="adults" value="{{ $formData['adults'] }}">
+                        @endif
+                        @if($formData['children'])
+                            <input type="hidden" name="children" value="{{ $formData['children'] }}">
+                        @endif
+                        @if($formData['promo'])
+                            <input type="hidden" name="promo_code" value="{{ $formData['promo'] }}">
+                        @endif
+                    @endif
                     <div class="flex flex-col gap-3 text-left text-xs text-[#706f6c]">
                         <label class="inline-flex items-start gap-2">
                             <input type="checkbox" class="mt-[0.2rem] h-3.5 w-3.5 rounded border border-[#d7d5cf] focus:outline-none focus:ring-1 focus:ring-[#f53003]">

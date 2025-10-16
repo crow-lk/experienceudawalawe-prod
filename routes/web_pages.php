@@ -19,4 +19,4 @@ Route::view('/stories', 'stories.index')->name('stories.index');
 Route::view('/gallery', 'gallery')->name('gallery');
 Route::view('/about', 'about')->name('about');
 Route::view('/faq', 'faq')->name('faq');
-Route::view('/contact', 'contact')->name('contact');
+Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index'])->name('contact');

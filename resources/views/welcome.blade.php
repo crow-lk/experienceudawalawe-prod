@@ -34,10 +34,9 @@
                 <div class="mt-1 flex items-center justify-between text-xs text-[#1b1b18]">
                     <select name="experience" class="w-full appearance-none bg-transparent text-[#1b1b18] focus:outline-none">
                         <option value="" selected>Select an experience</option>
-                        <option value="culinary">Culinary Journeys</option>
-                        <option value="wildlife">Wildlife &amp; Nature</option>
-                        <option value="culture">Culture &amp; Village Life</option>
-                        <option value="sustainability">Sustainability &amp; Community</option>
+                        @foreach($experiences as $experience)
+                            <option value="{{ $experience->slug }}">{{ $experience->title }}</option>
+                        @endforeach
                     </select>
                     <span class="ml-2 text-[10px] text-[#9a9994]">&dtrif;</span>
                 </div>

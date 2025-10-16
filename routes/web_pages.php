@@ -1,27 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ExperienceController;
 
 // Additional site pages
-Route::view('/experiences', 'experiences.index')->name('experiences.index');
-Route::get('/experiences/{slug}', function ($slug) {
-    // Minimal lookup - in a real app you'd fetch from DB
-    $items = [
-        'cooking-class' => 'Cooking Class',
-        'safari-tour' => 'Safari Tour',
-        'spice-gardens' => 'Spice & Herbal Gardens',
-        'village-walks' => 'Village Walks',
-        'lake-activities' => 'Lake & Nature Activities',
-    ];
-
-    if (! array_key_exists($slug, $items)) {
-        abort(404);
-    }
-
-    $title = $items[$slug];
-
-    return view('experiences.show', compact('slug', 'title'));
-})->name('experiences.show');
+Route::get('/experiences', [ExperienceController::class, 'index'])->name('experiences.index');
+Route::get('/experiences/{experience:slug}', [ExperienceController::class, 'show'])->name('experiences.show');
 
 Route::view('/dining', 'dining')->name('dining');
 Route::redirect('/community', '/sustainability');

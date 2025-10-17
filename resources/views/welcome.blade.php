@@ -20,8 +20,7 @@
             <div class="px-6 pb-20 sm:pb-24">
                 <div class="mx-auto max-w-4xl space-y-6 text-center text-white">
                     <p class="text-xs uppercase tracking-[0.5em] text-white/60 sm:text-sm">Authentic Roots, Living Stories</p>
-                    <h2 class="text-4xl font-semibold tracking-tight sm:text-5xl">Experience Udawalawe.</h2>
-                    <p class="mx-auto max-w-3xl text-base text-white/80 sm:text-lg">Journeys that connect culture, community, and nature.</p>
+                    
                 </div>
             </div>
         </div>
@@ -80,6 +79,7 @@
                 <div class="space-y-4">
                     <p class="text-xs uppercase tracking-[0.4em] text-[#b3b1ac]">Welcome to</p>
                     <h2 class="mt-3 text-4xl font-semibold tracking-tight text-[#1b1b18] sm:text-5xl">Experience Udawalawe</h2>
+                    <p class="mx-auto max-w-3xl text-base text-[#b3b1ac] sm:text-lg">Journeys that connect culture, community, and nature.</p>
                     <div class="flex items-center gap-3">
                         <div class="h-px flex-1 bg-[#c7c3b7]"></div>
                         <img src="{{ asset('images/elements/rorate-flower.png') }}" alt="Experience motif" class="h-10 w-10 animate-spin-slower object-contain opacity-80" loading="lazy">

@@ -86,8 +86,8 @@
                         <div class="h-px flex-1 bg-[#c7c3b7]"></div>
                     </div>
                 </div>
-                <p class="text-xs leading-relaxed text-[#50504d] sm:text-sm">Welcome to Experience Udawalawe, where Sri Lanka's cultural heritage, community spirit, and wild beauty come together in one unforgettable journey. From village kitchens and spice gardens to tranquil lake rides and safaris through Udawalawe National Park, every experience is rooted in authenticity and respect for nature.</p>
-                <p class="text-xs leading-relaxed text-[#50504d] sm:text-sm">Guided by our commitment to regenerative tourism, your visit supports local livelihoods, protects biodiversity, and preserves traditions. Here, travel becomes more than discovery, it becomes belonging.</p>
+                <p class="text-xs leading-relaxed text-[#50504d] sm:text-sm text-justify">Welcome to Experience Udawalawe, where Sri Lanka's cultural heritage, community spirit, and wild beauty come together in one unforgettable journey. From village kitchens and spice gardens to tranquil lake rides and safaris through Udawalawe National Park, every experience is rooted in authenticity and respect for nature.</p>
+                <p class="text-xs leading-relaxed text-[#50504d] sm:text-sm text-justify">Guided by our commitment to regenerative tourism, your visit supports local livelihoods, protects biodiversity, and preserves traditions. Here, travel becomes more than discovery, it becomes belonging.</p>
             </div>
             <div class="lg:w-1/2">
                 <div class="overflow-hidden border border-[#ecebe5] shadow-sm">
@@ -100,8 +100,8 @@
     <section class="bg-[#FDFDFC] py-16 lg:py-20">
         <div class="mx-auto max-w-6xl space-y-10 px-6">
             <div class="space-y-4 text-center">
-                <p class="text-xs uppercase tracking-[0.35em] text-[#b3b1ac]">Why Experience Udawalawe?</p>
-                <h2 class="text-3xl font-semibold tracking-tight text-[#1b1b18]">Living connections, lasting impact</h2>
+                <h2 class="text-3xl font-semibold tracking-tight text-[#1b1b18]">Why Experience Udawalawe?</h2>
+                <p class="text-xs uppercase tracking-[0.35em] text-[#b3b1ac]">Living connections, lasting impact</p>
                 <p class="text-base leading-relaxed text-[#50504d]">Journeys shaped with care, respecting the land, uplifting people, and creating stories you will carry long after you return home.</p>
             </div>
             <div class="grid gap-8 md:grid-cols-3">

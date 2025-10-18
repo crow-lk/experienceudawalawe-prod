@@ -23,6 +23,15 @@
                         <a href="{{ route('gallery') }}" class="header-link text-[9px] transition-colors">Gallery</a>
                     </div>
                     <div class="flex items-center space-x-6 mt-1 pt-1">
+                        <!-- Desktop overlay menu button (in navigation) -->
+                        <button data-overlay-toggle class="hidden md:inline-flex items-center justify-center header-toggle focus:outline-none" aria-expanded="false" aria-controls="nav-overlay">
+                            <svg data-mobile-open class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                            <svg data-mobile-close class="h-4 w-4 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
                         <a href="{{ url('/') }}" class="header-link text-[9px] transition-colors">Home</a>
                         <a href="{{ route('faq') }}" class="header-link text-[9px] transition-colors">FAQ</a>
                         <a href="{{ route('contact') }}" class="header-link text-[9px] transition-colors">Contact</a>
@@ -41,7 +50,7 @@
                 <div class="flex justify-end items-center col-start-3 col-end-4 gap-4">
                     <a href="{{ route('contact') }}" class="hidden md:inline-flex items-center justify-center text-sm px-7 py-2 btn-book-outline font-semibold uppercase tracking-[0.2em] transition-colors">Book Now</a>
 
-                    <!-- Mobile menu button -->
+                    <!-- Mobile menu button (visible below md) -->
                     <button data-overlay-toggle class="md:hidden inline-flex items-center justify-center p-2 rounded-md header-toggle focus:outline-none">
                         <svg data-mobile-open class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />

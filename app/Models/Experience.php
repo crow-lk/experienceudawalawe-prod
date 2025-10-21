@@ -14,12 +14,23 @@ class Experience extends Model
 
     protected $fillable = [
         'title',
+        'subtitle',
+        'type',
         'slug',
         'short_summary',
         'body',
         'inclusions',
+        'what_to_wear',
+        'exclusions',
+        'accessibility_info',
+        'booking_policy',
+        'good_to_know',
+        'traveler_qa',
         'duration_label',
+        'group_size',
+        'difficulty_level',
         'base_price',
+        'show_price_publicly',
         'hero_image_path',
         'gallery',
         'is_published',
@@ -30,8 +41,11 @@ class Experience extends Model
 
     protected $casts = [
         'inclusions' => 'array',
+        'exclusions' => 'array',
+        'traveler_qa' => 'array',
         'gallery' => 'array',
         'is_published' => 'boolean',
+        'show_price_publicly' => 'boolean',
         'base_price' => 'decimal:2',
     ];
 

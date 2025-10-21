@@ -41,9 +41,9 @@
                             ['What is the cancellation policy?', 'Cancel 7 days in advance for a full refund. Between 7 and 3 days we credit your booking for a future stay. Within 48 hours, charges apply to cover community commitments.'],
                             ['What happens if weather disrupts an experience?', 'We monitor conditions closely and reschedule or adapt activities while keeping you informed.'],
                         ],
-                        'Village Authenticity & Pricing Clarifications' => [
+                        'Village Authenticity & Booking Information' => [
                             ['Is the village experience authentic?', 'Absolutely. Experiences are hosted by residents in their homes, farms, and community spaces. We do not stage or replicate cultural practices.'],
-                            ['Why are some activities priced differently?', 'Pricing reflects group size limits, specialist facilitators, and the revenue share agreed with community partners. We provide a breakdown with each quote.'],
+                            ['How do I get pricing information?', 'We provide personalized quotes based on your group size, preferred dates, and selected experiences. Contact us for detailed pricing and availability.'],
                         ],
                     ];
                 @endphp

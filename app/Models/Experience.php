@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
 
@@ -16,6 +17,7 @@ class Experience extends Model
         'title',
         'subtitle',
         'type',
+        'experience_type_id',
         'slug',
         'short_summary',
         'body',
@@ -58,6 +60,11 @@ class Experience extends Model
                 $experience->slug = Str::slug($experience->title);
             }
         });
+    }
+
+    public function experienceType(): BelongsTo
+    {
+        return $this->belongsTo(ExperienceType::class);
     }
 
     public function scopePublished(Builder $query): Builder

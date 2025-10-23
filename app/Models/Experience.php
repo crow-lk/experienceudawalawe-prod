@@ -81,4 +81,20 @@ class Experience extends Model
     {
         return 'slug';
     }
+
+    /**
+     * Get the body content without HTML tags
+     */
+    public function getPlainBodyAttribute(): string
+    {
+        return strip_tags($this->body ?? '');
+    }
+
+    /**
+     * Get the body content with proper line breaks
+     */
+    public function getFormattedBodyAttribute(): string
+    {
+        return str_replace(['<p>', '</p>'], ['', "\n\n"], $this->body ?? '');
+    }
 }

@@ -65,7 +65,8 @@ class ExperienceResource extends Resource
 
                 Forms\Components\Section::make('Content')
                     ->schema([
-                        Forms\Components\RichEditor::make('body')
+                        Forms\Components\Textarea::make('body')
+                            ->rows(10)
                             ->columnSpanFull(),
                         
                         Forms\Components\Repeater::make('inclusions')

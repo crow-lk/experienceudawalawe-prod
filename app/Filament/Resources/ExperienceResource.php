@@ -194,6 +194,9 @@ class ExperienceResource extends Resource
                             ->directory('experiences/hero')
                             ->image()
                             ->imageEditor()
+                            ->maxSize(10240) // 10MB max
+                            ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                            ->visibility('public')
                             ->columnSpanFull(),
                         
                         Forms\Components\FileUpload::make('gallery')

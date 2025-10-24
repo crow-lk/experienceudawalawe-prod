@@ -1,10 +1,14 @@
 @props(['experience'])
 
+@php
+use Illuminate\Support\Facades\Storage;
+@endphp
+
 <article class="group rounded-2xl border border-[#ecebe5] bg-white shadow-sm overflow-hidden hover:shadow-md transition-shadow">
     @if($experience->hero_image_path)
         <div class="aspect-[4/3] overflow-hidden relative">
             <img 
-                src="{{ asset('storage/' . $experience->hero_image_path) }}" 
+                src="{{ Storage::disk('public')->url($experience->hero_image_path) }}" 
                 alt="{{ $experience->title }}" 
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 loading="lazy"

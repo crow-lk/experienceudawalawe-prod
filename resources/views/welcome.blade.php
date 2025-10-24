@@ -148,8 +148,8 @@
     <section class="bg-[#FDFDFC] py-16 lg:py-20">
         <div class="mx-auto max-w-6xl space-y-10 px-6">
             <div class="space-y-4 text-center">
-                <p class="text-xs uppercase tracking-[0.35em] text-[#b3b1ac]">Experiences at Experience Udawalawe</p>
-                <h2 class="text-3xl font-semibold tracking-tight text-[#1b1b18]">A collection of journeys that bring you closer to the land, its people, and its stories.</h2>
+                 <h2 class="text-3xl font-semibold tracking-tight text-[#1b1b18]">Experiences at Experience Udawalawe</h2>
+                <p class="text-xs uppercase tracking-[0.35em] text-[#b3b1ac]">A collection of journeys that bring you closer to the land, its people, and its stories.</p>
                 <p class="text-base leading-relaxed text-[#50504d] sm:text-lg">Each of our experiences is designed to let you see, taste, and feel the spirit of Udawalawe. Learn to cook in a village kitchen with recipes handed down through generations, wander spice and herbal gardens where old knowledge thrives, and share meals that carry the warmth of community.</p>
                 <p class="text-base leading-relaxed text-[#50504d] sm:text-lg">Set out on safaris to meet elephants and wild birds in their natural home or simply sit beneath the stars and listen to stories that have shaped this land. Here, every path leads to Authentic Roots, Living Stories.</p>
             </div>
@@ -158,7 +158,7 @@
 
     <section class="bg-white py-16 lg:py-20">
         <div class="mx-auto max-w-5xl space-y-8 px-6 text-center">
-            <p class="text-xs uppercase tracking-[0.35em] text-[#b3b1ac]">About Experience Udawalawe</p>
+            <h2 class="text-3xl font-semibold tracking-tight text-[#1b1b18]">About Experience Udawalawe</h2>
             <p class="text-base leading-relaxed text-[#50504d] sm:text-lg">We have a deep respect for Udawalawe, its people, its landscapes, and its living traditions. Experience Udawalawe was founded to share these stories through carefully curated journeys that connect culture, community, and nature.</p>
             <p class="text-base leading-relaxed text-[#50504d] sm:text-lg">Each experience, from cooking in village kitchens to exploring spice gardens and setting out on safaris, is designed to be authentic and sustainable. Guided by our promise of Authentic Roots, Living Stories, we invite you to discover a way of travel that protects wildlife, supports local families, and keeps traditions alive.</p>
         </div>

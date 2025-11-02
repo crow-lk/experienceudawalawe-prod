@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\Models\Experience;
+use App\Models\ExperienceType;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
@@ -97,5 +98,85 @@ class ExperienceTest extends TestCase
         $secondPos = strpos($content, 'Second Experience');
         
         $this->assertLessThan($secondPos, $firstPos);
+    }
+
+    public function test_experiences_can_be_filtered_by_experience_type(): void
+    {
+        $wildlifeType = ExperienceType::factory()->create([
+            'name' => 'Wildlife',
+            'slug' => 'wildlife',
+            'is_active' => true,
+        ]);
+
+        $culinaryType = ExperienceType::factory()->create([
+            'name' => 'Culinary',
+            'slug' => 'culinary',
+            'is_active' => true,
+        ]);
+
+        Experience::factory()->create([
+            'title' => 'Wildlife Safari',
+            'is_published' => true,
+            'experience_type_id' => $wildlifeType->id,
+        ]);
+
+        Experience::factory()->create([
+            'title' => 'Cooking Class',
+            'is_published' => true,
+            'experience_type_id' => $culinaryType->id,
+        ]);
+
+        $this->assertEquals(
+            $wildlifeType->id,
+            Experience::where('title', 'Wildlife Safari')->first()->experience_type_id
+        );
+
+        $this->assertEquals(
+            $culinaryType->id,
+            Experience::where('title', 'Cooking Class')->first()->experience_type_id
+        );
+
+        $response = $this->get(route('experiences.index', ['type' => $wildlifeType->slug]));
+
+        $response->assertStatus(200);
+
+        $this->assertEquals(
+            ['Wildlife Safari'],
+            $response->viewData('experiences')->getCollection()->pluck('title')->all()
+        );
+
+        $response->assertSee('Wildlife Safari');
+    }
+
+    public function test_filtering_uses_type_name_when_relationship_missing(): void
+    {
+        $culturalType = ExperienceType::factory()->create([
+            'name' => 'Cultural Immersion',
+            'slug' => 'cultural-immersion',
+            'is_active' => true,
+        ]);
+
+        Experience::factory()->create([
+            'title' => 'Village Storytelling',
+            'type' => 'Cultural Immersion',
+            'experience_type_id' => null,
+            'is_published' => true,
+        ]);
+
+        Experience::factory()->create([
+            'title' => 'Different Experience',
+            'type' => 'Something Else',
+            'experience_type_id' => null,
+            'is_published' => true,
+        ]);
+
+        $response = $this->get(route('experiences.index', ['type' => $culturalType->slug]));
+
+        $response->assertStatus(200);
+
+        $this->assertEquals(
+            ['Village Storytelling'],
+            $response->viewData('experiences')->getCollection()->pluck('title')->all()
+        );
     }
 }

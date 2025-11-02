@@ -78,12 +78,8 @@
             <div class="lg:w-1/2 space-y-6 text-left">
                 <div class="space-y-4">
                     <h2 class="mt-3 text-4xl font-semibold tracking-tight text-[#1b1b18] sm:text-5xl">Experience Udawalawe</h2>
+                    @include('partials.heading-divider')
                     <p class="mx-auto max-w-3xl text-base text-[#b3b1ac] sm:text-lg">Journeys that connect culture, community, and nature.</p>
-                    <div class="flex items-center gap-3">
-                        <div class="h-px flex-1 bg-[#c7c3b7]"></div>
-                        <img src="{{ asset('images/elements/rorate-flower.png') }}" alt="Experience motif" class="h-10 w-10 animate-spin-slower object-contain opacity-80" loading="lazy">
-                        <div class="h-px flex-1 bg-[#c7c3b7]"></div>
-                    </div>
                 </div>
                 <p class="text-xs leading-relaxed text-[#50504d] sm:text-sm text-justify">Welcome to Experience Udawalawe, where Sri Lanka's cultural heritage, community spirit, and wild beauty come together in one unforgettable journey. From village kitchens and spice gardens to tranquil lake rides and safaris through Udawalawe National Park, every experience is rooted in authenticity and respect for nature.</p>
                 <p class="text-xs leading-relaxed text-[#50504d] sm:text-sm text-justify">Guided by our commitment to regenerative tourism, your visit supports local livelihoods, protects biodiversity, and preserves traditions. Here, travel becomes more than discovery, it becomes belonging.</p>
@@ -100,26 +96,86 @@
         <div class="mx-auto max-w-6xl space-y-10 px-6">
             <div class="space-y-4 text-center">
                 <h2 class="text-3xl font-semibold tracking-tight text-[#1b1b18]">Why Experience Udawalawe?</h2>
+                @include('partials.heading-divider', ['align' => 'center'])
                 <p class="text-xs uppercase tracking-[0.35em] text-[#b3b1ac]">Living connections, lasting impact</p>
                 <p class="text-base leading-relaxed text-[#50504d]">Journeys shaped with care, respecting the land, uplifting people, and creating stories you will carry long after you return home.</p>
             </div>
-            <div class="grid gap-8 md:grid-cols-3">
-                <article class="rounded-2xl border border-[#ecebe5] bg-white p-6 shadow-sm">
-                    <h3 class="text-lg font-semibold text-[#1b1b18]">Living Heritage</h3>
-                    <p class="mt-3 text-sm leading-relaxed text-[#706f6c]">Step into a way of life preserved through generations&mdash;village kitchens, local crafts, and stories told under the stars.</p>
-                </article>
-                <article class="rounded-2xl border border-[#ecebe5] bg-white p-6 shadow-sm">
-                    <h3 class="text-lg font-semibold text-[#1b1b18]">Responsible Journeys</h3>
-                    <p class="mt-3 text-sm leading-relaxed text-[#706f6c]">Every visit contributes to community well-being, safeguards wildlife, and ensures traditions thrive for the future.</p>
-                </article>
-                <article class="rounded-2xl border border-[#ecebe5] bg-white p-6 shadow-sm">
-                    <h3 class="text-lg font-semibold text-[#1b1b18]">Bonds that Last</h3>
-                    <p class="mt-3 text-sm leading-relaxed text-[#706f6c]">Led by people of the land, our small-scale experiences create genuine bonds and unforgettable memories.</p>
-                </article>
-            </div>
-            <div class="rounded-2xl border border-[#ecebe5] bg-[#f6f3ec] p-8 text-center">
-                <h3 class="text-xl font-semibold text-[#1b1b18]">Wild and Untamed</h3>
-                <p class="mt-4 text-sm leading-relaxed text-[#50504d] sm:text-base">From the elephants of Udawalawe National Park to the call of hornbills at sunrise, nature surrounds you in its purest, most powerful form.</p>
+
+            @php
+                $whySlides = [
+                    [
+                        'title' => 'Living Heritage',
+                        'subtitle' => 'Hands-on cultural immersion',
+                        'description' => 'Step into kitchens perfumed by spices, learn ancient crafts, and gather under the stars for stories passed down through generations.',
+                        'image' => 'images/logosample.png',
+                        'alt' => 'Guests sharing a traditional meal in Udawalawe',
+                    ],
+                    [
+                        'title' => 'Responsible Journeys',
+                        'subtitle' => 'Travel that regenerates',
+                        'description' => 'Every visit contributes to community well-being, safeguards wildlife, and keeps traditions thriving for the future.',
+                        'image' => 'images/logo3.png',
+                        'alt' => 'Illustration representing responsible travel in Udawalawe',
+                    ],
+                    [
+                        'title' => 'Bonds that Last',
+                        'subtitle' => 'Hosted by people of the land',
+                        'description' => 'Small-group encounters led by local hosts invite genuine connection and shared memories you will carry home.',
+                        'image' => 'images/logowhite.png',
+                        'alt' => 'Community connections in Udawalawe',
+                    ],
+                    [
+                        'title' => 'Wild and Untamed',
+                        'subtitle' => 'Nature in its purest form',
+                        'description' => 'Hear the rumble of elephants, wake to hornbills at sunrise, and feel the pulse of Udawalawe\'s wilderness all around you.',
+                        'image' => 'images/elements/rorate-flower.png',
+                        'alt' => 'Symbolic floral motif from Udawalawe',
+                    ],
+                ];
+            @endphp
+
+            <div class="why-carousel" data-why-carousel data-why-interval="6500">
+                <div class="why-carousel__track" data-why-track>
+                    @foreach($whySlides as $slide)
+                        <article class="why-carousel__slide" data-why-slide>
+                            <div class="why-carousel__card">
+                                <figure class="why-carousel__media">
+                                    <img src="{{ asset($slide['image']) }}" alt="{{ $slide['alt'] }}" loading="lazy">
+                                </figure>
+                                <div class="why-carousel__body">
+                                    <span class="why-carousel__badge">{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}</span>
+                                    <p class="why-carousel__eyebrow">{{ $slide['subtitle'] }}</p>
+                                    <h3>{{ $slide['title'] }}</h3>
+                                    <p>{{ $slide['description'] }}</p>
+                                </div>
+                            </div>
+                        </article>
+                    @endforeach
+                </div>
+
+                <button type="button" class="why-carousel__control why-carousel__control--prev" data-why-prev aria-label="Previous highlight">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+
+                <button type="button" class="why-carousel__control why-carousel__control--next" data-why-next aria-label="Next highlight">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+
+                <div class="why-carousel__dots" data-why-dots>
+                    @foreach($whySlides as $slide)
+                        <button
+                            type="button"
+                            class="why-carousel__dot @if($loop->first) is-active @endif"
+                            data-why-dot="{{ $loop->index }}"
+                            aria-label="Show {{ $slide['title'] }}"
+                            @if($loop->first) aria-current="true" @endif
+                        ></button>
+                    @endforeach
+                </div>
             </div>
         </div>
     </section>
@@ -128,6 +184,7 @@
         <div class="mx-auto max-w-6xl space-y-8 px-6 text-center">
             <p class="text-xs uppercase tracking-[0.35em] text-[#b3b1ac]">Explore Our Experiences</p>
             <h2 class="text-3xl font-semibold tracking-tight text-[#1b1b18]">Look through our extensive collection of authentic experiences in Udawalawe</h2>
+            @include('partials.heading-divider', ['align' => 'center'])
             <p class="text-base leading-relaxed text-[#50504d] sm:text-lg">Discover experiences that bring you closer to the spirit of Udawalawe. Cook with locals in open-air kitchens, learn the old ways of grinding spices, and wander through gardens filled with fresh herbs. Share simple meals prepared with care, listen to stories passed down through generations, and join safaris where elephants roam the plains and wild birds fill the sky.</p>
             <p class="text-base leading-relaxed text-[#50504d] sm:text-lg">Each experience reflects the values of Experience Udawalawe, rooted in tradition, guided by sustainability, and enriched by human connection. This is where culture, nature, and story meet, creating memories that belong to you long after you leave.</p>
             <a href="{{ route('experiences.index') }}" class="inline-flex items-center gap-2 rounded-full border border-[#1b1b18] px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#1b1b18] transition hover:bg-[#1b1b18] hover:text-white">
@@ -149,6 +206,7 @@
         <div class="mx-auto max-w-6xl space-y-10 px-6">
             <div class="space-y-4 text-center">
                  <h2 class="text-3xl font-semibold tracking-tight text-[#1b1b18]">Experiences at Experience Udawalawe</h2>
+                @include('partials.heading-divider', ['align' => 'center'])
                 <p class="text-xs uppercase tracking-[0.35em] text-[#b3b1ac]">A collection of journeys that bring you closer to the land, its people, and its stories.</p>
                 <p class="text-base leading-relaxed text-[#50504d] sm:text-lg">Each of our experiences is designed to let you see, taste, and feel the spirit of Udawalawe. Learn to cook in a village kitchen with recipes handed down through generations, wander spice and herbal gardens where old knowledge thrives, and share meals that carry the warmth of community.</p>
                 <p class="text-base leading-relaxed text-[#50504d] sm:text-lg">Set out on safaris to meet elephants and wild birds in their natural home or simply sit beneath the stars and listen to stories that have shaped this land. Here, every path leads to Authentic Roots, Living Stories.</p>
@@ -159,6 +217,7 @@
     <section class="bg-white py-16 lg:py-20">
         <div class="mx-auto max-w-5xl space-y-8 px-6 text-center">
             <h2 class="text-3xl font-semibold tracking-tight text-[#1b1b18]">About Experience Udawalawe</h2>
+            @include('partials.heading-divider', ['align' => 'center'])
             <p class="text-base leading-relaxed text-[#50504d] sm:text-lg">We have a deep respect for Udawalawe, its people, its landscapes, and its living traditions. Experience Udawalawe was founded to share these stories through carefully curated journeys that connect culture, community, and nature.</p>
             <p class="text-base leading-relaxed text-[#50504d] sm:text-lg">Each experience, from cooking in village kitchens to exploring spice gardens and setting out on safaris, is designed to be authentic and sustainable. Guided by our promise of Authentic Roots, Living Stories, we invite you to discover a way of travel that protects wildlife, supports local families, and keeps traditions alive.</p>
         </div>

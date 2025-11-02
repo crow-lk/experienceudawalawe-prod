@@ -11,6 +11,7 @@
                 <div class="space-y-6">
                     <p class="text-xs uppercase tracking-[0.35em] text-[#b3b1ac]">About Experience Udawalawa</p>
                     <h2 class="text-3xl font-semibold text-[#1b1b18]">From ancestral roots to regenerative futures</h2>
+                    @include('partials.heading-divider')
                     <p class="text-sm text-[#50504d] sm:text-base leading-relaxed">
                         Experience Udawalawa is a living campus that brings together storytellers, naturalists, and culinary
                         artisans who call the Udawalawe region home. We craft journeys that honor heritage, celebrate biodiversity,
@@ -43,6 +44,7 @@
 
             <section class="space-y-8">
                 <h3 class="text-2xl font-semibold text-[#1b1b18]">Our Philosophy</h3>
+                @include('partials.heading-divider')
                 <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     <article class="rounded-2xl border border-[#ecebe5] bg-white p-6 shadow-sm">
                         <h4 class="text-lg font-semibold text-[#1b1b18]">Sustainability</h4>
@@ -70,6 +72,7 @@
 
             <section class="space-y-8">
                 <h3 class="text-2xl font-semibold text-[#1b1b18]">What We Offer</h3>
+                @include('partials.heading-divider')
                 <div class="grid gap-6 md:grid-cols-3">
                     <article class="rounded-2xl border border-[#ecebe5] bg-[#f6f3ec] p-6 shadow-sm">
                         <p class="text-xs uppercase tracking-[0.3em] text-[#9c9b96]">Restaurant</p>
@@ -103,6 +106,7 @@
                     <div class="space-y-4">
                         <p class="text-xs uppercase tracking-[0.35em] text-[#b3b1ac]">Our Promise</p>
                         <h3 class="text-2xl font-semibold text-[#1b1b18]">Journeys that leave lasting impact</h3>
+                        @include('partials.heading-divider')
                         <p class="text-sm text-[#50504d] sm:text-base leading-relaxed">
                             We commit to transparency, community-led decisions, and measurable sustainability milestones.
                             Your stay fuels scholarships, habitat monitoring, women-led enterprises, and the preservation of

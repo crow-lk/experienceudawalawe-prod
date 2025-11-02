@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\ExperienceType;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -21,6 +22,7 @@ class ExperienceFactory extends Factory
         return [
             'title' => $title,
             'slug' => \Illuminate\Support\Str::slug($title),
+            'experience_type_id' => ExperienceType::factory(),
             'short_summary' => $this->faker->paragraph(),
             'body' => $this->faker->paragraphs(3, true),
             'inclusions' => [

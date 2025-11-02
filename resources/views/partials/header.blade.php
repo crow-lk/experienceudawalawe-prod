@@ -5,9 +5,9 @@
                 <!-- Left: Tabs (two rows) -->
                 <nav class="hidden md:flex flex-col col-start-1 col-end-2">
                     <div class="flex items-center space-x-6 header-divider pb-1">
-                        <a href="{{ route('about') }}" class="header-link text-[9px] transition-colors">About</a>
+                        <a href="{{ route('about') }}" class="header-link transition-colors">About</a>
                         <div class="relative group">
-                            <a href="{{ route('experiences.index') }}" class="header-link text-[9px] transition-colors">Experiences</a>
+                            <a href="{{ route('experiences.index') }}" class="header-link transition-colors">Experiences</a>
                         <div class="absolute left-0 top-full hidden group-hover:block bg-black/60 text-white backdrop-blur-md border border-white/10 shadow-lg w-64 z-20">
                             <a href="{{ route('experiences.index') }}" class="block px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-white transition-colors hover:bg-white/15">All Experiences</a>
                             @if(isset($headerExperiences) && $headerExperiences->count() > 0)
@@ -18,9 +18,9 @@
                             @endif
                         </div>
                         </div>
-                        <a href="{{ route('sustainability') }}" class="header-link text-[9px] whitespace-nowrap transition-colors">Sustainability</a>
-                        <a href="{{ route('stories.index') }}" class="header-link text-[9px] transition-colors">Stories</a>
-                        <a href="{{ route('gallery') }}" class="header-link text-[9px] transition-colors">Gallery</a>
+                        <a href="{{ route('sustainability') }}" class="header-link whitespace-nowrap transition-colors">Sustainability</a>
+                        <a href="{{ route('stories.index') }}" class="header-link transition-colors">Stories</a>
+                        <a href="{{ route('gallery') }}" class="header-link transition-colors">Gallery</a>
                     </div>
                     <div class="flex items-center space-x-6 mt-1 pt-1">
                         <!-- Desktop overlay menu button (in navigation) -->
@@ -32,9 +32,9 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
-                        <a href="{{ url('/') }}" class="header-link text-[9px] transition-colors">Home</a>
-                        <a href="{{ route('faq') }}" class="header-link text-[9px] transition-colors">FAQ</a>
-                        <a href="{{ route('contact') }}" class="header-link text-[9px] transition-colors">Contact</a>
+                        <a href="{{ url('/') }}" class="header-link transition-colors">Home</a>
+                        <a href="{{ route('faq') }}" class="header-link transition-colors">FAQ</a>
+                        <a href="{{ route('contact') }}" class="header-link transition-colors">Contact</a>
                     </div>
                 </nav>
 

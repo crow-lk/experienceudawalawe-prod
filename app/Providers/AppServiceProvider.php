@@ -29,7 +29,6 @@ class AppServiceProvider extends ServiceProvider
         ], function ($view) {
             $experiences = Experience::published()
                 ->ordered()
-                ->select('id', 'title', 'slug', 'category')
                 ->get();
             
             $view->with('headerExperiences', $experiences);

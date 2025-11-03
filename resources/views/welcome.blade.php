@@ -184,7 +184,7 @@
         <div class="mx-auto max-w-6xl space-y-8 px-6 text-center">
             <p class="text-xs uppercase tracking-[0.35em] text-[#b3b1ac]">Explore Our Experiences</p>
             <h2 class="text-3xl font-semibold tracking-tight text-[#1b1b18]">Look through our extensive collection of authentic experiences in Udawalawe</h2>
-            @include('partials.heading-divider', ['align' => 'center'])
+            @include('partials.heading-divider', ['align' => 'center', 'showIcon' => true])
             <p class="text-base leading-relaxed text-[#50504d] sm:text-lg">Discover experiences that bring you closer to the spirit of Udawalawe. Cook with locals in open-air kitchens, learn the old ways of grinding spices, and wander through gardens filled with fresh herbs. Share simple meals prepared with care, listen to stories passed down through generations, and join safaris where elephants roam the plains and wild birds fill the sky.</p>
             <p class="text-base leading-relaxed text-[#50504d] sm:text-lg">Each experience reflects the values of Experience Udawalawe, rooted in tradition, guided by sustainability, and enriched by human connection. This is where culture, nature, and story meet, creating memories that belong to you long after you leave.</p>
             <a href="{{ route('experiences.index') }}" class="inline-flex items-center gap-2 rounded-full border border-[#1b1b18] px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#1b1b18] transition hover:bg-[#1b1b18] hover:text-white">
@@ -222,4 +222,17 @@
             <p class="text-base leading-relaxed text-[#50504d] sm:text-lg">Each experience, from cooking in village kitchens to exploring spice gardens and setting out on safaris, is designed to be authentic and sustainable. Guided by our promise of Authentic Roots, Living Stories, we invite you to discover a way of travel that protects wildlife, supports local families, and keeps traditions alive.</p>
         </div>
     </section>
-*** End Patch
+
+    <section class="bg-[#FDFDFC] py-16 lg:py-20">
+        <div class="mx-auto max-w-4xl space-y-6 px-6 text-center">
+            <h2 class="text-3xl font-semibold tracking-tight text-[#1b1b18]">Sustainability at Experience Udawalawe</h2>
+            @include('partials.heading-divider', ['align' => 'center'])
+            <p class="text-xs uppercase tracking-[0.35em] text-[#b3b1ac]">Join us in our journey, where every visit supports people, wildlife, and traditions.</p>
+            <p class="text-base leading-relaxed text-[#50504d] sm:text-lg">
+                At Experience Udawalawe, sustainability is at the heart of what we do. From supporting local families to protecting
+                wildlife and preserving cultural heritage, every activity is shaped by regenerative tourism. Your journey here creates
+                memories while leaving a positive mark on the land and community.
+            </p>
+        </div>
+    </section>
+

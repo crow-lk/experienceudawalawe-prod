@@ -1,0 +1,71 @@
+name: Deploy Laravel Application to Live Server
+
+on:
+  push:
+    branches:
+      - live
+  workflow_dispatch:
+
+jobs:
+  deploy-live:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.4.3
+          extensions: mbstring, bcmath, intl, pdo_mysql
+          coverage: none
+
+      - name: Install Composer Dependencies
+        run: composer install --no-dev --optimize-autoloader
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # Enable these steps if you need fresh frontend assets for live deployments.
+      # - name: Install NPM Dependencies
+      #   run: npm ci
+
+      # - name: Build Frontend Assets
+      #   run: npm run build
+
+      - name: Install sshpass
+        run: sudo apt-get update && sudo apt-get install -y sshpass
+
+      - name: Sync Application Files To Live Server
+        env:
+          SSH_PASSWORD: ${{ secrets.LIVE_SSH_PASSWORD }}
+        run: |
+          sshpass -p "${SSH_PASSWORD}" rsync \
+            -e "ssh -p 65002 -o StrictHostKeyChecking=no" \
+            --recursive \
+            --delete \
+            --exclude ".git" \
+            --exclude ".github" \
+            --exclude "node_modules" \
+            --exclude "storage/logs" \
+            --exclude ".env" \
+            ./ u763117446@147.93.78.59:/home/u763117446/domains/experienceudawalawe.com/public_html/
+
+      - name: Run Remote Deployment Commands
+        env:
+          SSH_PASSWORD: ${{ secrets.LIVE_SSH_PASSWORD }}
+        run: |
+          sshpass -p "${SSH_PASSWORD}" ssh -p 65002 -o StrictHostKeyChecking=no u763117446@147.93.78.59 <<'EOF'
+          set -e
+          cd /home/u763117446/domains/experienceudawalawe.com/public_html/
+
+          /opt/alt/php84/usr/bin/php /usr/local/bin/composer2 install --no-dev --optimize-autoloader
+          /opt/alt/php84/usr/bin/php artisan config:cache
+          /opt/alt/php84/usr/bin/php artisan migrate --force
+          /opt/alt/php84/usr/bin/php artisan route:cache
+          /opt/alt/php84/usr/bin/php artisan view:cache
+          /opt/alt/php84/usr/bin/php artisan optimize:clear
+          EOF

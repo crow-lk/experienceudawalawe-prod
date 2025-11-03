@@ -11,7 +11,7 @@
                 <div class="space-y-6">
                     <p class="text-xs uppercase tracking-[0.35em] text-[#b3b1ac]">About Experience Udawalawa</p>
                     <h2 class="text-3xl font-semibold text-[#1b1b18]">From ancestral roots to regenerative futures</h2>
-                    @include('partials.heading-divider')
+                    @include('partials.heading-divider', ['showIcon' => true])
                     <p class="text-sm text-[#50504d] sm:text-base leading-relaxed">
                         Experience Udawalawa is a living campus that brings together storytellers, naturalists, and culinary
                         artisans who call the Udawalawe region home. We craft journeys that honor heritage, celebrate biodiversity,

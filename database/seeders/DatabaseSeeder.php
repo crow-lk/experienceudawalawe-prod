@@ -13,15 +13,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        // Comment out the default factory user to avoid conflicts
+        // User::factory()->create([
+        //     'name' => 'Test User',
+        //     'email' => 'test@example.com',
+        // ]);
 
         $this->call([
-            ExperienceSeeder::class,
+            // SQLite data seeders (for production deployment)
+            UserDataSeeder::class,
+            ExperienceTypeDataSeeder::class,
+            ExperienceDataSeeder::class,
+            
+            // Original seeders (for development)
+            // ExperienceSeeder::class,
         ]);
     }
 }

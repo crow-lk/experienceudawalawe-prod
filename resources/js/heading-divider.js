@@ -39,6 +39,11 @@ const shouldSkipHeading = (heading) => {
 };
 
 const initHeadingDividers = () => {
+    // Skip automatic heading dividers on experiences page
+    if (window.location.pathname.includes('/experiences')) {
+        return;
+    }
+    
     const headings = document.querySelectorAll('h1, h2, h3');
 
     headings.forEach((heading) => {

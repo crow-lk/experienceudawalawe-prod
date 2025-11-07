@@ -7,6 +7,15 @@
     @include('partials.page-hero', ['title' => 'Let’s Stay Connected', 'subtitle' => 'Share your travel dreams, questions, or collaboration ideas'])
     <main class="relative -mt-8 bg-[#FDFDFC]">
         <div class="mx-auto max-w-6xl px-6 py-16 lg:py-20 space-y-12">
+            <!-- Introduction Section -->
+            <section class="text-center space-y-4">
+                <div class="max-w-4xl mx-auto">
+                    <p class="text-base sm:text-lg leading-relaxed text-[#2c2c28] font-light">
+                        We'd love to hear from you! Whether you're planning a visit, looking to collaborate, or simply curious to learn more about our restaurant and experiences, our team is here to help. Fill out the form below or reach us directly through phone or email — we'll be in touch as soon as possible.
+                    </p>
+                </div>
+            </section>
+
             <section class="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
                 <form class="space-y-6 rounded-2xl border border-[#ecebe5] bg-white p-8 shadow-sm">
                     <p class="text-xs uppercase tracking-[0.35em] text-[#b3b1ac]">Contact Form</p>

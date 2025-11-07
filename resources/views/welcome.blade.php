@@ -182,9 +182,9 @@
 
     <section class="bg-white py-16 lg:py-20">
         <div class="mx-auto max-w-6xl space-y-8 px-6 text-center">
-            <p class="text-xs uppercase tracking-[0.35em] text-[#b3b1ac]">Explore Our Experiences</p>
-            <h2 class="text-3xl font-semibold tracking-tight text-[#1b1b18]">Look through our extensive collection of authentic experiences in Udawalawe</h2>
-            @include('partials.heading-divider', ['align' => 'center', 'showIcon' => true])
+            <h2 class="text-3xl font-semibold tracking-tight text-[#1b1b18]">Explore Our Experiences</h2>
+            <p class="text-xs uppercase tracking-[0.35em] text-[#b3b1ac]">Look through our extensive collection of authentic experiences in Udawalawe</p>
+            {{-- @include('partials.heading-divider', ['align' => 'center']) --}}
             <p class="text-base leading-relaxed text-[#50504d] sm:text-lg">Discover experiences that bring you closer to the spirit of Udawalawe. Cook with locals in open-air kitchens, learn the old ways of grinding spices, and wander through gardens filled with fresh herbs. Share simple meals prepared with care, listen to stories passed down through generations, and join safaris where elephants roam the plains and wild birds fill the sky.</p>
             <p class="text-base leading-relaxed text-[#50504d] sm:text-lg">Each experience reflects the values of Experience Udawalawe, rooted in tradition, guided by sustainability, and enriched by human connection. This is where culture, nature, and story meet, creating memories that belong to you long after you leave.</p>
             <a href="{{ route('experiences.index') }}" class="inline-flex items-center gap-2 rounded-full border border-[#1b1b18] px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#1b1b18] transition hover:bg-[#1b1b18] hover:text-white">
@@ -196,7 +196,6 @@
 
     <section class="bg-[#0f1012] py-16 lg:py-20">
         <div class="mx-auto max-w-4xl px-6 text-center text-white">
-            <p class="text-xs uppercase tracking-[0.4em] text-white/50">Featured Phrase</p>
             <blockquote class="mt-6 text-3xl font-light leading-tight sm:text-4xl">“Journeys fade, but the stories remain.”</blockquote>
             <p class="mt-6 text-sm text-white/60 sm:text-base">Each memory you gather here finds a home in the hearts of the people who welcomed you.</p>
         </div>
@@ -235,4 +234,3 @@
             </p>
         </div>
     </section>
-

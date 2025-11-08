@@ -18,9 +18,9 @@
                     name="email"
                     type="email"
                     placeholder="you@example.com"
-                    class="w-full sm:flex-1 rounded-md border border-white/20 bg-white/10 px-4 py-2 text-sm placeholder-white/50 focus:border-[#fbae2e] focus:outline-none focus:ring-1 focus:ring-[#fbae2e]"
+                    class="w-full sm:flex-1 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm placeholder-white/50 focus:border-[#fbae2e] focus:outline-none focus:ring-1 focus:ring-[#fbae2e]"
                 >
-                <button type="submit" class="inline-flex items-center justify-center rounded-md bg-[#fbae2e] px-5 py-2 text-sm font-semibold text-[#1b1b18] hover:bg-[#e09d27] focus:outline-none focus:ring-2 focus:ring-[#fbae2e] focus:ring-offset-2 focus:ring-offset-[#0f1012] transition">
+                <button type="submit" class="inline-flex items-center justify-center rounded-full bg-[#fbae2e] px-5 py-2 text-sm font-semibold text-[#1b1b18] hover:bg-[#e09d27] focus:outline-none focus:ring-2 focus:ring-[#fbae2e] focus:ring-offset-2 focus:ring-offset-[#0f1012] transition">
                     Sign Up
                 </button>
             </form>

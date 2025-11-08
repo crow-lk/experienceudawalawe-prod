@@ -7,7 +7,7 @@
     @include('partials.page-hero', ['title' => 'About Us', 'subtitle' => 'Authentic Roots, Living Stories'])
     <main class="relative -mt-8 bg-[#FDFDFC]">
         <div class="mx-auto max-w-6xl px-6 py-16 lg:py-20 space-y-16">
-            <section class="grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-start">
+            <section class="grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-center">
                 <div class="space-y-6">
                     <p class="text-xs uppercase tracking-[0.35em] text-[#b3b1ac]">Ayubowan and welcome to Experience Udawalawe.</p>
                     <h2 class="text-3xl font-semibold text-[#1b1b18]">Who We Are</h2>
@@ -20,202 +20,119 @@
                     </p>
                 </div>
                 
-                <!-- Animated Image Gallery -->
-                <div class="relative">
-                    <div class="grid grid-cols-4 gap-3 h-96" id="imageGallery">
-                        <!-- Large main image (spans 2x2) -->
-                        <div class="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-lg">
+                <!-- Enhanced Masonry Image Gallery -->
+                <div class="flex items-center justify-center h-full">
+                    <div class="masonry-gallery about-masonry" id="masonryGallery">
+                        <!-- Image 1 -->
+                        <div class="masonry-gallery__item masonry-gallery__item--large" data-lightbox="gallery">
                             <img 
-                                src="https://images.unsplash.com/photo-1564760055775-d63b17a55c44?q=80&w=800&auto=format&fit=crop" 
-                                alt="Experience Udawalawe Gallery" 
-                                class="w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
-                                id="image1"
+                                src="{{ asset('images/carousel/PHOTO-2025-10-24-11-47-04.jpg') }}" 
+                                alt="Experience Udawalawe - Village Life" 
+                                class="masonry-gallery__image"
                                 loading="lazy"
                             />
                         </div>
                         
-                        <!-- Top-right small image -->
-                        <div class="rounded-2xl overflow-hidden shadow-lg">
+                        <!-- Image 2 -->
+                        <div class="masonry-gallery__item" data-lightbox="gallery">
                             <img 
-                                src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&w=800&auto=format&fit=crop" 
-                                alt="Ceylon 1850 Restaurant" 
-                                class="w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
-                                id="image2"
+                                src="{{ asset('images/carousel/PHOTO-2025-10-09-13-50-10 2.jpg') }}" 
+                                alt="Experience Udawalawe - Traditional Activities" 
+                                class="masonry-gallery__image"
                                 loading="lazy"
                             />
                         </div>
                         
-                        <!-- Top-far-right tall image -->
-                        <div class="row-span-2 rounded-2xl overflow-hidden shadow-lg">
+                        <!-- Image 3 -->
+                        <div class="masonry-gallery__item masonry-gallery__item--tall" data-lightbox="gallery">
                             <img 
-                                src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=800&auto=format&fit=crop" 
-                                alt="Local Experiences" 
-                                class="w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
-                                id="image3"
+                                src="{{ asset('images/carousel/PHOTO-2025-10-09-13-53-43 2.jpg') }}" 
+                                alt="Experience Udawalawe - Local Culture" 
+                                class="masonry-gallery__image"
                                 loading="lazy"
                             />
                         </div>
                         
-                        <!-- Middle-right small image -->
-                        <div class="rounded-2xl overflow-hidden shadow-lg">
+                        <!-- Image 4 -->
+                        <div class="masonry-gallery__item" data-lightbox="gallery">
                             <img 
-                                src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?q=80&w=800&auto=format&fit=crop" 
-                                alt="Traditional Cooking" 
-                                class="w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
-                                id="image4"
+                                src="{{ asset('images/carousel/PHOTO-2025-10-24-11-47-02.jpg') }}" 
+                                alt="Experience Udawalawe - Nature & Wildlife" 
+                                class="masonry-gallery__image"
                                 loading="lazy"
                             />
                         </div>
                         
-                        <!-- Bottom-left small image -->
-                        <div class="rounded-2xl overflow-hidden shadow-lg">
+                        <!-- Image 5 -->
+                        <div class="masonry-gallery__item masonry-gallery__item--wide" data-lightbox="gallery">
                             <img 
-                                src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800&auto=format&fit=crop" 
-                                alt="Spice Garden" 
-                                class="w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
-                                id="image5"
+                                src="{{ asset('images/carousel/PHOTO-2025-10-09-13-40-54.jpg') }}" 
+                                alt="Experience Udawalawe - Authentic Experiences" 
+                                class="masonry-gallery__image"
                                 loading="lazy"
                             />
                         </div>
                         
-                        <!-- Bottom-center small image -->
-                        <div class="rounded-2xl overflow-hidden shadow-lg">
+                        <!-- Image 6 -->
+                        <div class="masonry-gallery__item" data-lightbox="gallery">
                             <img 
-                                src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=800&auto=format&fit=crop" 
-                                alt="Community Life" 
-                                class="w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
-                                id="image6"
+                                src="{{ asset('images/carousel/PHOTO-2025-10-09-13-33-55.jpg') }}" 
+                                alt="Experience Udawalawe - Village Traditions" 
+                                class="masonry-gallery__image"
                                 loading="lazy"
                             />
                         </div>
                         
-                        <!-- Bottom-right small image -->
-                        <div class="rounded-2xl overflow-hidden shadow-lg">
+                        <!-- Image 7 -->
+                        <div class="masonry-gallery__item masonry-gallery__item--tall" data-lightbox="gallery">
                             <img 
-                                src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=800&auto=format&fit=crop" 
-                                alt="Nature Walks" 
-                                class="w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
-                                id="image7"
+                                src="{{ asset('images/carousel/PHOTO-2025-10-09-13-53-45.jpg') }}" 
+                                alt="Experience Udawalawe - Cultural Immersion" 
+                                class="masonry-gallery__image"
                                 loading="lazy"
                             />
                         </div>
                         
-                        <!-- Additional bottom image -->
-                        <div class="rounded-2xl overflow-hidden shadow-lg">
+                        <!-- Image 8 -->
+                        <div class="masonry-gallery__item" data-lightbox="gallery">
                             <img 
-                                src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?q=80&w=800&auto=format&fit=crop" 
-                                alt="Traditional Crafts" 
-                                class="w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
-                                id="image8"
+                                src="{{ asset('images/carousel/PHOTO-2025-10-09-13-53-42.jpg') }}" 
+                                alt="Experience Udawalawe - Traditional Crafts" 
+                                class="masonry-gallery__image"
                                 loading="lazy"
                             />
                         </div>
                     </div>
                 </div>
+                
+                <!-- Lightbox Modal -->
+                <div id="lightboxModal" class="lightbox-modal" style="display: none;">
+                    <div class="lightbox-overlay" id="lightboxOverlay"></div>
+                    <div class="lightbox-container">
+                        <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
+                        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15,18 9,12 15,6"></polyline>
+                            </svg>
+                        </button>
+                        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9,6 15,12 9,18"></polyline>
+                            </svg>
+                        </button>
+                        <div class="lightbox-content">
+                            <img id="lightboxImage" class="lightbox-image" src="" alt="" />
+                            <div class="lightbox-caption" id="lightboxCaption"></div>
+                            <div class="lightbox-counter" id="lightboxCounter"></div>
+                        </div>
+                    </div>
+                </div>
             </section>
-
-            <!-- Gallery Animation Script -->
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    const imagesSets = [
-                        // Set 1: Wildlife & Nature
-                        [
-                            'https://images.unsplash.com/photo-1564760055775-d63b17a55c44?q=80&w=800&auto=format&fit=crop',
-                            'https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&w=800&auto=format&fit=crop',
-                            'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=800&auto=format&fit=crop',
-                            'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?q=80&w=800&auto=format&fit=crop',
-                            'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800&auto=format&fit=crop',
-                            'https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=800&auto=format&fit=crop',
-                            'https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=800&auto=format&fit=crop',
-                            'https://images.unsplash.com/photo-1582750433449-648ed127bb54?q=80&w=800&auto=format&fit=crop'
-                        ],
-                        // Set 2: Food & Dining
-                        [
-                            'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=800&auto=format&fit=crop',
-                            'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=800&auto=format&fit=crop',
-                            'https://images.unsplash.com/photo-1574484284002-952d92456975?q=80&w=800&auto=format&fit=crop',
-                            'https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=800&auto=format&fit=crop',
-                            'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=800&auto=format&fit=crop',
-                            'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?q=80&w=800&auto=format&fit=crop',
-                            'https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=800&auto=format&fit=crop',
-                            'https://images.unsplash.com/photo-1565958011703-44f9829ba187?q=80&w=800&auto=format&fit=crop'
-                        ],
-                        // Set 3: Cultural Experiences
-                        [
-                            'https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?q=80&w=800&auto=format&fit=crop',
-                            'https://images.unsplash.com/photo-1582750433449-648ed127bb54?q=80&w=800&auto=format&fit=crop',
-                            'https://images.unsplash.com/photo-1590736969955-71cc94901144?q=80&w=800&auto=format&fit=crop',
-                            'https://images.unsplash.com/photo-1583222865862-a613a7e1abb5?q=80&w=800&auto=format&fit=crop',
-                            'https://images.unsplash.com/photo-1570197788417-0e82375c9371?q=80&w=800&auto=format&fit=crop',
-                            'https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?q=80&w=800&auto=format&fit=crop',
-                            'https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?q=80&w=800&auto=format&fit=crop',
-                            'https://images.unsplash.com/photo-1564769662533-4f00a87b4056?q=80&w=800&auto=format&fit=crop'
-                        ],
-                        // Set 4: Landscapes & Gardens
-                        [
-                            'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800&auto=format&fit=crop',
-                            'https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?q=80&w=800&auto=format&fit=crop',
-                            'https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=800&auto=format&fit=crop',
-                            'https://images.unsplash.com/photo-1569163139394-de4e4f43e4e5?q=80&w=800&auto=format&fit=crop',
-                            'https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?q=80&w=800&auto=format&fit=crop',
-                            'https://images.unsplash.com/photo-1502780402662-acc01917738e?q=80&w=800&auto=format&fit=crop',
-                            'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800&auto=format&fit=crop',
-                            'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=800&auto=format&fit=crop'
-                        ]
-                    ];
-
-                    let currentSetIndex = 0;
-                    const imageElements = [
-                        document.getElementById('image1'),
-                        document.getElementById('image2'),
-                        document.getElementById('image3'),
-                        document.getElementById('image4'),
-                        document.getElementById('image5'),
-                        document.getElementById('image6'),
-                        document.getElementById('image7'),
-                        document.getElementById('image8')
-                    ];
-
-                    function changeImages() {
-                        // Fade out all images
-                        imageElements.forEach(img => {
-                            if (img) img.style.opacity = '0.3';
-                        });
-
-                        setTimeout(() => {
-                            // Change to next image set
-                            currentSetIndex = (currentSetIndex + 1) % imagesSets.length;
-                            const currentSet = imagesSets[currentSetIndex];
-                            
-                            // Update each image source
-                            imageElements.forEach((img, index) => {
-                                if (img && currentSet[index]) {
-                                    img.src = currentSet[index];
-                                }
-                            });
-
-                            // Fade in all images
-                            imageElements.forEach(img => {
-                                if (img) img.style.opacity = '1';
-                            });
-                        }, 500);
-                    }
-
-                    // Change images every 5 seconds
-                    let intervalId = setInterval(changeImages, 5000);
-
-                    // Pause animation on hover
-                    const gallery = document.getElementById('imageGallery');
-                    
-                    gallery.addEventListener('mouseenter', () => {
-                        clearInterval(intervalId);
-                    });
-                    
-                    gallery.addEventListener('mouseleave', () => {
-                        intervalId = setInterval(changeImages, 5000);
-                    });
-                });
-            </script>
 
             <section class="space-y-8">
                 <h3 class="text-2xl font-semibold text-[#1b1b18]">Our Philosophy</h3>
@@ -283,7 +200,7 @@
                     <article class="group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                         <div class="relative h-48 overflow-hidden">
                             <img 
-                                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=800&auto=format&fit=crop" 
+                                src="{{ asset('images/Cooking class/PHOTO-2025-10-09-13-53-42.jpg') }}" 
                                 alt="Ceylon 1850 Restaurant" 
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                                 loading="lazy"
@@ -311,7 +228,7 @@
                     <article class="group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                         <div class="relative h-48 overflow-hidden">
                             <img 
-                                src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?q=80&w=800&auto=format&fit=crop" 
+                                src="{{ asset('images/Cinnamon peeling/PHOTO-2025-10-09-13-33-05.jpg') }}" 
                                 alt="Cultural Experiences" 
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                                 loading="lazy"
@@ -339,7 +256,7 @@
                     <article class="group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                         <div class="relative h-48 overflow-hidden">
                             <img 
-                                src="https://images.unsplash.com/photo-1564760055775-d63b17a55c44?q=80&w=800&auto=format&fit=crop" 
+                                src="{{ asset('images/carousel/PHOTO-2025-10-24-11-47-02.jpg') }}" 
                                 alt="Nature Excursions" 
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                                 loading="lazy"
@@ -386,4 +303,97 @@
             </section>
         </div>
     </main>
+
+    <!-- Lightbox JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const lightboxModal = document.getElementById('lightboxModal');
+            const lightboxImage = document.getElementById('lightboxImage');
+            const lightboxCaption = document.getElementById('lightboxCaption');
+            const lightboxCounter = document.getElementById('lightboxCounter');
+            const lightboxClose = document.getElementById('lightboxClose');
+            const lightboxOverlay = document.getElementById('lightboxOverlay');
+            const lightboxPrev = document.getElementById('lightboxPrev');
+            const lightboxNext = document.getElementById('lightboxNext');
+            
+            const galleryItems = document.querySelectorAll('[data-lightbox="gallery"]');
+            let currentImageIndex = 0;
+            const images = [];
+            
+            // Collect all images data
+            galleryItems.forEach((item, index) => {
+                const img = item.querySelector('img');
+                images.push({
+                    src: img.src,
+                    alt: img.alt
+                });
+                
+                // Add click event to each gallery item
+                item.addEventListener('click', () => {
+                    currentImageIndex = index;
+                    openLightbox();
+                });
+            });
+            
+            function openLightbox() {
+                updateLightboxImage();
+                lightboxModal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+                
+                // Add animation
+                setTimeout(() => {
+                    lightboxModal.classList.add('lightbox-active');
+                }, 10);
+            }
+            
+            function closeLightbox() {
+                lightboxModal.classList.remove('lightbox-active');
+                setTimeout(() => {
+                    lightboxModal.style.display = 'none';
+                    document.body.style.overflow = '';
+                }, 300);
+            }
+            
+            function updateLightboxImage() {
+                const currentImage = images[currentImageIndex];
+                lightboxImage.src = currentImage.src;
+                lightboxImage.alt = currentImage.alt;
+                lightboxCaption.textContent = currentImage.alt;
+                lightboxCounter.textContent = `${currentImageIndex + 1} / ${images.length}`;
+            }
+            
+            function showPrevImage() {
+                currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+                updateLightboxImage();
+            }
+            
+            function showNextImage() {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                updateLightboxImage();
+            }
+            
+            // Event listeners
+            lightboxClose.addEventListener('click', closeLightbox);
+            lightboxOverlay.addEventListener('click', closeLightbox);
+            lightboxPrev.addEventListener('click', showPrevImage);
+            lightboxNext.addEventListener('click', showNextImage);
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (lightboxModal.style.display === 'flex') {
+                    switch(e.key) {
+                        case 'Escape':
+                            closeLightbox();
+                            break;
+                        case 'ArrowLeft':
+                            showPrevImage();
+                            break;
+                        case 'ArrowRight':
+                            showNextImage();
+                            break;
+                    }
+                }
+            });
+        });
+    </script>
 @endsection

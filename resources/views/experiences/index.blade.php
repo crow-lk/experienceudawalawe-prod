@@ -59,12 +59,12 @@
                 <div class="prose prose-lg prose-stone mx-auto max-w-none">
                     <div class="space-y-6 text-[#2c2c28]">
                         <!-- First paragraph -->
-                        <p class="text-lg sm:text-xl font-light leading-relaxed">
+                        <p class="text-sm sm:text-base font-light leading-relaxed">
                             In Udawalawe, every experience is rooted in real life. It is a living landscape where nature and community are inseparable. From the vast plains of the national park to quiet village paths and herbs and spice-scented gardens, every corner invite discovery. Here, elephants and birds move freely across open skies, while local communities share the stories, crafts, and practices that have shaped their lives for generations.
                         </p>
 
                         <!-- Second paragraph -->
-                        <p class="text-lg sm:text-xl font-light leading-relaxed">
+                        <p class="text-sm sm:text-base font-light leading-relaxed">
                             At Experience Udawalawe, our promise is simple: <strong class="font-medium text-stone-800">Authentic Roots, Living Stories</strong>. Each journey is more than sightseeing, it connects you with the people, wildlife, and heritage of this land. Each activity is led by those who call Udawalawe home — cooks, farmers, storytellers, and naturalists. What you take away is not just a memory but a lasting bond with place and people.
                         </p>
                     </div>
@@ -105,19 +105,20 @@
             <!-- Filter Navigation -->
             @if(isset($experienceTypes) && $experienceTypes->isNotEmpty())
                 <div class="mb-12">
-                    <div class="flex flex-wrap items-center justify-center gap-3">
+                    <div class="flex flex-wrap items-center justify-center gap-2">
                         <a 
                             href="{{ route('experiences.index') }}" 
-                            class="inline-flex items-center rounded-full border px-6 py-3 text-sm font-medium transition-all duration-300 {{ empty($requestedTypeSlug) ? 'border-[#1b1b18] bg-[#1b1b18] text-white shadow-lg' : 'border-stone-200 bg-white text-[#1b1b18] hover:border-stone-800 hover:bg-stone-50 hover:shadow-md' }}"
+                            class="inline-flex items-center rounded-full border px-4 py-2 text-xs font-medium transition-all duration-300 {{ empty($requestedTypeSlug) ? 'border-[#1b1b18] bg-[#1b1b18] text-white shadow-lg' : 'border-stone-200 bg-white text-[#1b1b18] hover:border-stone-800 hover:bg-stone-50 hover:shadow-md' }}"
                         >
-                            All Experiences
+                            All
                         </a>
                         @foreach($experienceTypes as $type)
                             <a 
                                 href="{{ route('experiences.index', ['type' => $type->slug]) }}" 
-                                class="inline-flex items-center rounded-full border px-6 py-3 text-sm font-medium transition-all duration-300 {{ (isset($activeTypeSlug) && $activeTypeSlug === $type->slug) ? 'border-[#1b1b18] bg-[#1b1b18] text-white shadow-lg' : 'border-stone-200 bg-white text-[#1b1b18] hover:border-stone-800 hover:bg-stone-50 hover:shadow-md' }}"
+                                class="inline-flex items-center rounded-full border px-4 py-2 text-xs font-medium transition-all duration-300 {{ (isset($activeTypeSlug) && $activeTypeSlug === $type->slug) ? 'border-[#1b1b18] bg-[#1b1b18] text-white shadow-lg' : 'border-stone-200 bg-white text-[#1b1b18] hover:border-stone-800 hover:bg-stone-50 hover:shadow-md' }}"
+                                title="{{ $type->name }}"
                             >
-                                {{ $type->name }}
+                                {{ str_replace(['Experience', 'Cultural &', 'Wildlife &', 'Culinary /', 'Sustainability &'], ['', 'Cultural', 'Wildlife', '', 'Eco'], $type->name) }}
                             </a>
                         @endforeach
                     </div>

@@ -77,11 +77,11 @@
         <div class="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 lg:flex-row lg:items-center">
             <div class="lg:w-1/2 space-y-6 text-left">
                 <div class="space-y-4">
-                    <h2 class="mt-3 text-4xl font-semibold tracking-tight text-[#1b1b18] sm:text-5xl">Experience Udawalawe</h2>
+                    <h2 class="mt-3 text-4xl font-semibold tracking-tight text-[#1b1b18] sm:text-5xl">Experience Udawalawe by Ceylon 1850</h2>
                     @include('partials.heading-divider')
                     <p class="mx-auto max-w-3xl text-base text-[#b3b1ac] sm:text-lg">Journeys that connect culture, community, and nature.</p>
                 </div>
-                <p class="text-xs leading-relaxed text-[#50504d] sm:text-sm text-justify">Welcome to Experience Udawalawe, where Sri Lanka's cultural heritage, community spirit, and wild beauty come together in one unforgettable journey. From village kitchens and spice gardens to tranquil lake rides and safaris through Udawalawe National Park, every experience is rooted in authenticity and respect for nature.</p>
+                <p class="text-xs leading-relaxed text-[#50504d] sm:text-sm text-justify">Welcome to Experience Udawalawe by Ceylon 1850, where Sri Lanka's cultural heritage, community spirit, and wild beauty come together in one unforgettable journey. From village kitchens and spice gardens to tranquil lake rides and safaris through Udawalawe National Park, every experience is rooted in authenticity and respect for nature.</p>
                 <p class="text-xs leading-relaxed text-[#50504d] sm:text-sm text-justify">Guided by our commitment to regenerative tourism, your visit supports local livelihoods, protects biodiversity, and preserves traditions. Here, travel becomes more than discovery, it becomes belonging.</p>
             </div>
             <div class="lg:w-1/2">
@@ -167,7 +167,7 @@
             <p class="text-xs uppercase tracking-[0.35em] text-[#b3b1ac]">Look through our extensive collection of authentic experiences in Udawalawe</p>
             {{-- @include('partials.heading-divider', ['align' => 'center']) --}}
             <p class="text-base leading-relaxed text-[#50504d] sm:text-lg">Discover experiences that bring you closer to the spirit of Udawalawe. Cook with locals in open-air kitchens, learn the old ways of grinding spices, and wander through gardens filled with fresh herbs. Share simple meals prepared with care, listen to stories passed down through generations, and join safaris where elephants roam the plains and wild birds fill the sky.</p>
-            <p class="text-base leading-relaxed text-[#50504d] sm:text-lg">Each experience reflects the values of Experience Udawalawe, rooted in tradition, guided by sustainability, and enriched by human connection. This is where culture, nature, and story meet, creating memories that belong to you long after you leave.</p>
+            <p class="text-base leading-relaxed text-[#50504d] sm:text-lg">Each experience reflects the values of Experience Udawalawe by Ceylon 1850, rooted in tradition, guided by sustainability, and enriched by human connection. This is where culture, nature, and story meet, creating memories that belong to you long after you leave.</p>
             
             <!-- Modern Card Carousel -->
             <div class="modern-carousel" data-carousel>
@@ -369,7 +369,7 @@
     <section class="bg-[#FDFDFC] py-16 lg:py-16">
         <div class="mx-auto max-w-6xl space-y-10 px-6">
             <div class="space-y-4 text-center">
-                 <h2 class="text-3xl font-semibold tracking-tight text-[#1b1b18]">Experiences at Experience Udawalawe</h2>
+                 <h2 class="text-3xl font-semibold tracking-tight text-[#1b1b18]">Experiences at Experience Udawalawe by Ceylon 1850</h2>
                 @include('partials.heading-divider', ['align' => 'center'])
                 <p class="text-xs uppercase tracking-[0.35em] text-[#b3b1ac]">A collection of journeys that bring you closer to the land, its people, and its stories.</p>
                 <p class="text-base leading-relaxed text-[#50504d] sm:text-lg">Each of our experiences is designed to let you see, taste, and feel the spirit of Udawalawe. Learn to cook in a village kitchen with recipes handed down through generations, wander spice and herbal gardens where old knowledge thrives, and share meals that carry the warmth of community.</p>
@@ -716,7 +716,7 @@
 
     <section class="bg-white py-16 lg:py-20">
         <div class="mx-auto max-w-5xl space-y-8 px-6 text-center">
-            <h2 class="text-3xl font-semibold tracking-tight text-[#1b1b18]">About Experience Udawalawe</h2>
+            <h2 class="text-3xl font-semibold tracking-tight text-[#1b1b18]">About Experience Udawalawe by Ceylon 1850</h2>
             @include('partials.heading-divider', ['align' => 'center'])
             <p class="text-base leading-relaxed text-[#50504d] sm:text-lg">We have a deep respect for Udawalawe, its people, its landscapes, and its living traditions. Experience Udawalawe was founded to share these stories through carefully curated journeys that connect culture, community, and nature.</p>
             <p class="text-base leading-relaxed text-[#50504d] sm:text-lg">Each experience, from cooking in village kitchens to exploring spice gardens and setting out on safaris, is designed to be authentic and sustainable. Guided by our promise of Authentic Roots, Living Stories, we invite you to discover a way of travel that protects wildlife, supports local families, and keeps traditions alive.</p>
@@ -738,7 +738,7 @@
             <!-- Header Section -->
             <div class="text-center mb-16">
                 <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight">
-                    Sustainability at Experience Udawalawe
+                    Sustainability at Experience Udawalawe by Ceylon 1850
                 </h2>
                 <div class="w-24 h-1 bg-white/30 rounded-full mx-auto mb-6"></div>
                 <p class="text-xl text-white/90 font-medium max-w-3xl mx-auto leading-relaxed">
@@ -786,7 +786,7 @@
             <div class="text-center">
                 <div class="bg-white/10 backdrop-blur-md rounded-3xl p-10 border border-white/20 max-w-4xl mx-auto">
                     <p class="text-lg lg:text-xl text-white leading-relaxed">
-                        At Experience Udawalawe, sustainability is at the heart of what we do. From supporting local families to protecting wildlife and preserving cultural heritage, every activity is shaped by regenerative tourism. Your journey here creates memories while leaving a positive mark on the land and community.
+                        At Experience Udawalawe by Ceylon 1850, sustainability is at the heart of what we do. From supporting local families to protecting wildlife and preserving cultural heritage, every activity is shaped by regenerative tourism. Your journey here creates memories while leaving a positive mark on the land and community.
                     </p>
                 </div>
             </div>

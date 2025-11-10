@@ -369,7 +369,7 @@
     <section class="bg-[#FDFDFC] py-16 lg:py-16">
         <div class="mx-auto max-w-6xl space-y-10 px-6">
             <div class="space-y-4 text-center">
-                 <h2 class="text-3xl font-semibold tracking-tight text-[#1b1b18]">Experiences at Experience Udawalawe by Ceylon 1850</h2>
+                 <h2 class="text-3xl font-semibold tracking-tight text-[#1b1b18]">Experiences at Udawalawe by Ceylon 1850</h2>
                 @include('partials.heading-divider', ['align' => 'center'])
                 <p class="text-xs uppercase tracking-[0.35em] text-[#b3b1ac]">A collection of journeys that bring you closer to the land, its people, and its stories.</p>
                 <p class="text-base leading-relaxed text-[#50504d] sm:text-lg">Each of our experiences is designed to let you see, taste, and feel the spirit of Udawalawe. Learn to cook in a village kitchen with recipes handed down through generations, wander spice and herbal gardens where old knowledge thrives, and share meals that carry the warmth of community.</p>

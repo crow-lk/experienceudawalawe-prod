@@ -5,36 +5,23 @@
                 <!-- Left: Tabs (two rows) -->
                 <nav class="hidden md:flex flex-col col-start-1 col-end-2">
                     <div class="flex items-center space-x-6 header-divider pb-1">
-                        <a href="{{ route('about') }}" class="header-link transition-colors">About</a>
-                        <div class="relative group">
-                            <a href="{{ route('experiences.index') }}" class="header-link transition-colors">Experiences</a>
-                        <div class="absolute left-0 top-full hidden group-hover:block bg-black/60 text-white backdrop-blur-md border border-white/10 shadow-lg w-64 z-20">
-                            <a href="{{ route('experiences.index') }}" class="block px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-white transition-colors hover:bg-white/15">All Experiences</a>
-                            @if(isset($headerExperiences) && $headerExperiences->count() > 0)
-                                <div class="border-t border-white/10 my-1"></div>
-                                @foreach($headerExperiences->take(4) as $experience)
-                                    <a href="{{ route('experiences.show', $experience->slug) }}" class="block px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-white transition-colors hover:bg-white/15">{{ $experience->title }}</a>
-                                @endforeach
-                            @endif
-                        </div>
-                        </div>
-                        <a href="{{ route('sustainability') }}" class="header-link whitespace-nowrap transition-colors">Sustainability</a>
-                        <a href="{{ route('stories.index') }}" class="header-link transition-colors">Stories</a>
-                        <a href="{{ route('gallery') }}" class="header-link transition-colors">Gallery</a>
-                    </div>
-                    <div class="flex items-center space-x-6 mt-1 pt-1">
-                        <!-- Desktop overlay menu button (in navigation) -->
+                        <!-- Desktop overlay menu button (All Categories) -->
                         <button data-overlay-toggle class="hidden md:inline-flex items-center justify-center header-toggle focus:outline-none" aria-expanded="false" aria-controls="nav-overlay">
-                            <svg data-mobile-open class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg data-mobile-open class="h-4 w-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                             </svg>
-                            <svg data-mobile-close class="h-4 w-4 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <span class="header-link">All Categories</span>
+                            <svg data-mobile-close class="h-4 w-4 ml-2 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
-                        <a href="{{ url('/') }}" class="header-link transition-colors">Home</a>
-                        <a href="{{ route('faq') }}" class="header-link transition-colors">FAQ</a>
-                        <a href="{{ route('contact') }}" class="header-link transition-colors">Contact</a>
+                        <a href="{{ route('experiences.index') }}" class="header-link transition-colors">Services</a>
+                        <a href="#" class="header-link transition-colors">Best Deals</a>
+                        <a href="#" class="header-link transition-colors">Payment Methods</a>
+                    </div>
+                    <div class="flex items-center space-x-6 mt-1 pt-1">
+                        <a href="{{ route('about') }}" class="header-link transition-colors">About us</a>
+                        <a href="{{ route('contact') }}" class="header-link transition-colors">Contact us</a>
                     </div>
                 </nav>
 

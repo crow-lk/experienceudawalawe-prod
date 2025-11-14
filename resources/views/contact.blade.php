@@ -114,16 +114,16 @@
                     <div class="space-y-3">
                         <p class="text-xs uppercase tracking-[0.35em] text-[#b3b1ac]">Direct Contact</p>
                         <div class="space-y-2 text-sm text-[#50504d]">
-                            <p><span class="font-semibold text-[#1b1b18]">Phone</span><br><a href="tel:+94112233445" class="text-[#f53003] hover:text-[#c62502] transition">+94 11 223 3445</a></p>
-                            <p><span class="font-semibold text-[#1b1b18]">Email</span><br><a href="mailto:hello@experienceudawalawa.com" class="text-[#f53003] hover:text-[#c62502] transition">hello@experienceudawalawa.com</a></p>
+                            <p><span class="font-semibold text-[#1b1b18]">Phone</span><br><a href="tel:+94777772668" class="text-[#f53003] hover:text-[#c62502] transition">9477 777 2668 | +9470 204 8054</a></p>
+                            <p><span class="font-semibold text-[#1b1b18]">Email</span><br><a href="mailto:ceylon1850@gmail.com" class="text-[#f53003] hover:text-[#c62502] transition">ceylon1850@gmail.com</a></p>
                             <p><span class="font-semibold text-[#1b1b18]">WhatsApp</span><br><a href="#" class="text-[#f53003] hover:text-[#c62502] transition">Chat with our hosts</a></p>
                         </div>
                     </div>
                     <div class="space-y-3 text-sm text-[#50504d]">
                         <p class="text-xs uppercase tracking-[0.35em] text-[#b3b1ac]">Visit</p>
                         <address class="not-italic">
-                            235 Udawalawe Road<br>
-                            Moneragala, Sri Lanka
+                            No 572, Thambiliwatta, Third lane<br>
+                            Maha Ara, Udawalawe
                         </address>
                     </div>
                     <div class="space-y-3 text-sm text-[#50504d]">

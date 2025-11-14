@@ -42,16 +42,16 @@
             <ul class="mt-4 space-y-3 text-sm text-white/70">
                 <li>
                     <span class="block font-medium text-white">Visit</span>
-                    235 Udawalawa Road<br>
-                    Moneragala, Sri Lanka
+                    No 572, Thambiliwatta, Third lane<br>
+                    Maha Ara, Udawalawe
                 </li>
                 <li>
                     <span class="block font-medium text-white">Call</span>
-                    <a href="tel:+94112233445" class="hover:text-brand-2 transition">+94 11 223 3445</a>
+                    <a href="tel:+94777772668" class="hover:text-brand-2 transition">9477 777 2668 | +9470 204 8054</a>
                 </li>
                 <li>
                     <span class="block font-medium text-white">Write</span>
-                    <a href="mailto:hello@experienceudawalawa.com" class="hover:text-brand-2 transition">hello@experienceudawalawa.com</a>
+                    <a href="mailto:ceylon1850@gmail.com" class="hover:text-brand-2 transition">ceylon1850@gmail.com</a>
                 </li>
             </ul>
         </div>

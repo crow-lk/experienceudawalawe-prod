@@ -723,70 +723,65 @@
         </div>
     </section>
 
-    <!-- Sustainability Section - Enhanced Design -->
-    <section class="relative bg-gradient-to-br from-[#c86542] via-[#d4744f] to-[#c86542] py-20 lg:py-28 overflow-hidden">
+    <!-- Sustainability Section - Compact Design -->
+    <section class="relative bg-gradient-to-br from-[#c86542] via-[#d4744f] to-[#c86542] py-12 lg:py-16 overflow-hidden">
         <!-- Background Pattern -->
         <div class="absolute inset-0 opacity-10">
             <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0); background-size: 20px 20px;"></div>
         </div>
         
-        <!-- Floating Elements -->
-        <div class="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl animate-pulse"></div>
-        <div class="absolute bottom-10 right-10 w-32 h-32 bg-white/5 rounded-full blur-2xl animate-pulse" style="animation-delay: 1s;"></div>
-        
         <div class="relative mx-auto max-w-6xl px-6">
             <!-- Header Section -->
-            <div class="text-center mb-16">
-                <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4 tracking-tight">
                     Sustainability at Experience Udawalawe by Ceylon 1850
                 </h2>
-                <div class="w-24 h-1 bg-white/30 rounded-full mx-auto mb-6"></div>
-                <p class="text-xl text-white/90 font-medium max-w-3xl mx-auto leading-relaxed">
-                    Join us in our journey, where every visit supports people, wildlife, and traditions.
+                <p class="text-lg text-white/90 font-medium max-w-2xl mx-auto leading-relaxed">
+                    Every visit supports people, wildlife, and traditions.
                 </p>
             </div>
 
             <!-- Content Cards -->
-            <div class="grid lg:grid-cols-3 gap-8 mb-12">
+            <div class="grid lg:grid-cols-3 gap-6 mb-8">
                 <!-- Supporting Local Families -->
-                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
-                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
+                    <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-white mb-4">Supporting Local Families</h3>
-                    <p class="text-white/80 leading-relaxed">Every experience directly benefits local communities, creating sustainable livelihoods while preserving traditional ways of life.</p>
+                    <h3 class="text-lg font-semibold text-white mb-3">Supporting Local Families</h3>
+                    <p class="text-white/80 text-sm leading-relaxed">Every experience directly benefits local communities, creating sustainable livelihoods.</p>
                 </div>
 
                 <!-- Protecting Wildlife -->
-                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
-                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
+                    <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-white mb-4">Protecting Wildlife</h3>
-                    <p class="text-white/80 leading-relaxed">Our responsible tourism practices contribute to conservation efforts, ensuring Udawalawe's wildlife thrives for future generations.</p>
+                    <h3 class="text-lg font-semibold text-white mb-3">Protecting Wildlife</h3>
+                    <p class="text-white/80 text-sm leading-relaxed">Our responsible tourism practices contribute to conservation efforts for future generations.</p>
                 </div>
 
                 <!-- Preserving Heritage -->
-                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
-                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 text-center">
+                    <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold text-white mb-4">Preserving Cultural Heritage</h3>
-                    <p class="text-white/80 leading-relaxed">We keep ancient traditions alive through authentic experiences, ensuring cultural knowledge passes to new generations.</p>
+                    <h3 class="text-lg font-semibold text-white mb-3">Preserving Cultural Heritage</h3>
+                    <p class="text-white/80 text-sm leading-relaxed">We keep ancient traditions alive through authentic experiences and cultural knowledge.</p>
                 </div>
             </div>
 
             <!-- Main Message -->
             <div class="text-center">
-                <div class="bg-white/10 backdrop-blur-md rounded-3xl p-10 border border-white/20 max-w-4xl mx-auto">
-                    <p class="text-lg lg:text-xl text-white leading-relaxed">
-                        At Experience Udawalawe by Ceylon 1850, sustainability is at the heart of what we do. From supporting local families to protecting wildlife and preserving cultural heritage, every activity is shaped by regenerative tourism. Your journey here creates memories while leaving a positive mark on the land and community.
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 max-w-3xl mx-auto">
+                    <p class="text-base lg:text-lg text-white leading-relaxed">
+                        At Experience Udawalawe by Ceylon 1850, sustainability is at the heart of what we do. Your journey creates memories while leaving a positive mark on the land and community.
                     </p>
                 </div>
             </div>

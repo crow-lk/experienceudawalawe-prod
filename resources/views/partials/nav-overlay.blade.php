@@ -36,7 +36,7 @@
         </div>
 
         <!-- Right Feature Cards Section -->
-        <div class="px-10 py-20 flex flex-col justify-center items-center mr-10">
+        <div class="px-10 py-20 flex flex-col justify-center items-center m-10">
 
             <div class="grid grid-cols-2 gap-8">
                 <!-- Card 1 -->

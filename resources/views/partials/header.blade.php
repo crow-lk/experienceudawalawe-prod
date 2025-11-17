@@ -5,16 +5,7 @@
                 <!-- Left: Tabs (two rows) -->
                 <nav class="hidden md:flex flex-col col-start-1 col-end-2">
                     <div class="flex items-center space-x-6 header-divider pb-1">
-                        <!-- Desktop overlay menu button (All Categories) -->
-                        <button data-overlay-toggle class="hidden md:inline-flex items-center justify-center header-toggle focus:outline-none" aria-expanded="false" aria-controls="nav-overlay">
-                            <svg data-mobile-open class="h-4 w-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                            <span class="header-link">All Categories</span>
-                            <svg data-mobile-close class="h-4 w-4 ml-2 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
+                        <a href="{{ route('about') }}" class="header-link transition-colors">About</a>
                         <div class="relative group">
                             <a href="{{ route('experiences.index') }}" class="header-link transition-colors">Experiences</a>
                             <div class="absolute left-1/2 top-full hidden -translate-x-1/2 group-hover:block bg-[#0a0a0f]/90 backdrop-blur-md text-white rounded shadow-2xl border border-white/10 py-2 w-64 z-20">
@@ -27,11 +18,21 @@
                                 @endif
                             </div>
                         </div>
-                        <a href="#" class="header-link transition-colors">Best Deals</a>
-                        <a href="#" class="header-link transition-colors">Payment Methods</a>
+                        <a href="{{ route('sustainability') }}" class="header-link transition-colors">Sustainability</a>
+                        <a href="{{ route('stories.index') }}" class="header-link transition-colors">Stories</a>
+                        <a href="{{ route('faq') }}" class="header-link transition-colors">FAQ</a>
                     </div>
                     <div class="flex items-center space-x-6 mt-1 pt-1">
-                        <a href="{{ route('about') }}" class="header-link transition-colors">About us</a>
+                        <button data-overlay-toggle class="hidden md:inline-flex items-center justify-center header-toggle focus:outline-none" aria-expanded="false" aria-controls="nav-overlay">
+                            <svg data-mobile-open class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                            <svg data-mobile-close class="h-4 w-4 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                            <span class="sr-only">Toggle navigation</span>
+                        </button>
+                        <a href="{{ url('/') }}" class="header-link transition-colors">Home</a>
                         <a href="{{ route('contact') }}" class="header-link transition-colors">Contact us</a>
                     </div>
                 </nav>

@@ -33,7 +33,6 @@ ehthumbs.db
 Thumbs.db
 
 # Build files
-/public/build
 /public/hot
 
 # Cache

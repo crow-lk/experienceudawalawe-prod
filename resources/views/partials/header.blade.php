@@ -15,7 +15,18 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
-                        <a href="{{ route('experiences.index') }}" class="header-link transition-colors">Services</a>
+                        <div class="relative group">
+                            <a href="{{ route('experiences.index') }}" class="header-link transition-colors">Experiences</a>
+                            <div class="absolute left-1/2 top-full hidden -translate-x-1/2 group-hover:block bg-[#0a0a0f]/90 backdrop-blur-md text-white rounded shadow-2xl border border-white/10 py-2 w-64 z-20">
+                                <a href="{{ route('experiences.index') }}" class="block px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-white/90 hover:bg-white/10 hover:text-white transition">All Experiences</a>
+                                @if(isset($headerExperiences) && $headerExperiences->count() > 0)
+                                    <div class="border-t border-brand/10 my-1"></div>
+                                    @foreach($headerExperiences->take(4) as $experience)
+                                        <a href="{{ route('experiences.show', $experience->slug) }}" class="block px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-white/90 hover:bg-white/10 hover:text-white transition">{{ $experience->title }}</a>
+                                    @endforeach
+                                @endif
+                            </div>
+                        </div>
                         <a href="#" class="header-link transition-colors">Best Deals</a>
                         <a href="#" class="header-link transition-colors">Payment Methods</a>
                     </div>

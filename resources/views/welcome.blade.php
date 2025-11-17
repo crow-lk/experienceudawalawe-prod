@@ -490,6 +490,8 @@
         </div>
     </section>
 
+    @include('partials.testimonials')
+
     <!-- Lightbox Modal -->
     <div id="lightbox-modal" class="lightbox-modal">
         <div class="lightbox-overlay" onclick="closeLightbox()"></div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Experience;
+use App\Models\ExperienceType;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -15,6 +16,10 @@ class HomeController extends Controller
             ->select('id', 'title', 'slug')
             ->get();
 
-        return view('welcome', compact('experiences'));
+        $experienceTypes = ExperienceType::ordered()
+            ->select('id', 'name', 'slug')
+            ->get();    
+
+        return view('welcome', compact('experiences', 'experienceTypes'));
     }
 }

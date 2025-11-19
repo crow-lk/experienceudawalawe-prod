@@ -8,9 +8,14 @@
             </svg>
         </button>
     </div>
-    <div class="max-w-7xl mx-auto px-20">
-       <img src="{{ asset('images/logo3.png') }}" alt="Example" class="w-64 h-64 relative ml-6">
+    <div class="max-w-9xl mx-auto px-6 flex flex-col gap-12">
+        <div class="w-auto grid grid-cols-2 relative z-10 h-full overflow-y-auto">
+            <div class="flex justify-center items-center">
+                <img src="{{ asset('images/logo3.png') }}" alt="Example" class="w-64 h-64">
+            </div>
+        </div>
     </div>
+
     <div class="max-w-9xl mx-auto px-6 flex flex-col gap-12">
         <div class="w-auto grid grid-cols-2 relative z-10 h-full overflow-y-auto">
             
@@ -18,7 +23,7 @@
             <div class="px-20">
                 <hr class="logo-nav-divider">
                 <nav class="grid grid-cols-2 gap-x-6 text-[15px] tracking-wide">
-                    <div class="grid grid-cols-1 gap-2">
+                    <div class="grid grid-cols-1 gap-4">
                         <a href="{{ url('/') }}" class="text-gray-300 transition">HOME</a>
                         <a href="{{ route('about') }}" class="text-gray-300 transition">ABOUT US</a>
                         <a href="{{ route('experiences.index') }}" class="text-gray-300 transition">EXPERIENCES</a>
@@ -29,7 +34,7 @@
                     </div>
                     <div class="grid grid-cols-2 gap-4">
                         @if(isset($experienceTypes) && $experienceTypes->isNotEmpty())
-                                    @foreach($experienceTypes as $type)
+                                    @foreach($experienceTypes->take(12) as $type)
                                         <a 
                                             href="{{ route('experiences.index', ['type' => $type->slug]) }}" 
                                             class="px-4 text-[12px] font-medium transition-all duration-300"
@@ -44,7 +49,7 @@
             </div>
 
             <!-- RIGHT FEATURE SLIDER -->
-            <div class="px-20 relative">
+            <div class="px-20 ">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
 
@@ -52,14 +57,14 @@
                         <div class="swiper-slide">
                             <a href="#" class="group relative overflow-hidden">
                                 <img src="{{ asset('images/Coconut experience/PHOTO-2025-10-09-13-40-53 2.jpg') }}"
-                                    class="w-full h-[380px] object-cover rounded-lg group-hover:scale-105 transition" />
+                                    class="w-full h-[300px] object-cover rounded-lg group-hover:scale-105 transition" />
                         </div>
 
                         <!-- Slide 2 -->
                         <div class="swiper-slide">
                             <a href="#" class="group relative overflow-hidden">
                                 <img src="{{ asset('images/Gem mine/PHOTO-2025-10-09-13-35-20.jpg') }}"
-                                    class="w-full h-[380px] object-cover rounded-lg group-hover:scale-105 transition" />
+                                    class="w-full h-[300px] object-cover rounded-lg group-hover:scale-105 transition" />
                             </a>
                         </div>
 
@@ -67,7 +72,7 @@
                         <div class="swiper-slide">
                             <a href="#" class="group relative overflow-hidden">
                                 <img src="{{ asset('images/Cooking class/PHOTO-2025-10-09-13-40-07.jpg') }}"
-                                    class="w-full h-[380px] object-cover rounded-lg group-hover:scale-105 transition" />
+                                    class="w-full h-[300px] object-cover rounded-lg group-hover:scale-105 transition" />
                             </a>
                         </div>
 
@@ -75,7 +80,7 @@
                         <div class="swiper-slide">
                             <a href="#" class="group relative overflow-hidden">
                                 <img src="{{ asset('images/Gem mine/PHOTO-2025-10-24-11-47-04.jpg') }}"
-                                    class="w-full h-[380px] object-cover rounded-lg group-hover:scale-105 transition" />
+                                    class="w-full h-[300px] object-cover rounded-lg group-hover:scale-105 transition" />
                             </a>
                         </div>
 
@@ -83,7 +88,7 @@
                         <div class="swiper-slide">
                             <a href="#" class="group relative overflow-hidden">
                                 <img src="{{ asset('images/carousel/PHOTO-2025-10-09-13-33-05.jpg') }}"
-                                    class="w-full h-[380px] object-cover rounded-lg group-hover:scale-105 transition" />
+                                    class="w-full h-[300px] object-cover rounded-lg group-hover:scale-105 transition" />
                             </a>
                         </div>
 
@@ -91,7 +96,7 @@
                         <div class="swiper-slide">
                             <a href="#" class="group relative overflow-hidden">
                                 <img src="{{ asset('images/Coconut experience/PHOTO-2025-10-09-13-39-59.jpg') }}"
-                                    class="w-full h-[380px] object-cover rounded-lg group-hover:scale-105 transition" />
+                                    class="w-full h-[300px] object-cover rounded-lg group-hover:scale-105 transition" />
                             </a>
                         </div>
 
@@ -105,7 +110,7 @@
                     </div>
                 </div>
             </div>
-            <div class="social-icons flex justify-center gap-6 mt-20">
+            <div class="social-icons flex justify-center gap-4 mt-8">
                 <a href="https://www.instagram.com/ceylon_1850_udawalawe?igsh=cXJ6ODlqMWxvMnFv" class="text-white transition" aria-label="Instagram">
                     <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
@@ -192,23 +197,53 @@
     .social-icons svg {
         transition: color 0.3s ease;
     }
-
-    /* Hover effects moved from Tailwind to CSS */
     /* Main navigation links hover */
     .grid.grid-cols-1.gap-2 a:hover {
-        color: #fd733f; /* Green for most links */
+        color: #fd733f;
     }
-    .grid.grid-cols-1.gap-2 a:first-child:hover { /* HOME link */
-        color: #fd733f; /* Amber for HOME */
+    .grid.grid-cols-1.gap-2 a:first-child:hover { 
+        color: #fd733f; 
     }
 
     /* Experience type links hover */
     .grid.grid-cols-2.gap-4 a:hover {
-        color: #fd733f; /* Green for experience types */
+        color: #fd733f; 
     }
 
     /* Social icons hover */
     .social-icons a:hover {
-        color: #fd733f; /* Green for social icons */
+        color: #fd733f;
     }
+
+    /* Laptop screens (1366px and below) */
+    @media (max-width: 1366px) {
+        .px-20 {
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+        }
+        .px-20:last-child {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        /* Reduce spacing between nav items */
+        nav a {
+            font-size: 13px !important;
+        }
+        .max-w-9xl {
+            width: 1200px !important;
+            height: auto !important;
+        }
+        /* Adjust grid layout proportion */
+        .grid.grid-cols-2 {
+            grid-template-columns: 50% 50% !important;
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+            top: 300px !important;
+        }
+    }
+
 </style>
+

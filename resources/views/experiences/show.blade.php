@@ -2,6 +2,12 @@
 
 @section('title', ($experience->meta_title ?? $experience->title) . ' - Experience Udawalawe')
 
+@section('css')
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link href="{{ asset('css/new.css') }}" rel="stylesheet">
+@endsection
+
 @section('meta-description', $experience->meta_description ?? $experience->short_summary)
 
 @section('body')
@@ -70,7 +76,7 @@
 
     <!-- Main Content -->
     <section class="bg-[#FDFDFC] py-16 lg:py-20">
-        <div class="mx-auto max-w-5xl px-6">
+        <div class="mx-auto max-w-6xl px-10">
             <div class="lg:grid lg:grid-cols-3 lg:gap-16">
                 <!-- Main Content Column -->
                 <div class="lg:col-span-2">
@@ -99,6 +105,31 @@
                             </div>
                         </div>
                     @endif
+                    <!-- Gallery Section -->
+                    @if($experience->gallery && count($experience->gallery) > 0)
+                        <div class="modern-carousel" data-carousel>
+                            <div class="modern-carousel__container" data-carousel-container>
+                                @foreach($experience->gallery ?? [] as $image)
+                                    <div class="modern-carousel__card" data-carousel-card>
+                                        <div class="modern-carousel__image-container">
+                                            <a href="{{ asset('storage/' . $image) }}" data-lightbox="experience-gallery">
+                                                <img src="{{ asset('storage/' . $image) }}" alt="Gallery Image" class="modern-carousel__image" loading="lazy">
+                                            </a>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                        {{-- <div style="rowcontent: ''; display: table;clear: both;">
+                            @foreach($experience->gallery ?? [] as $image)
+                                    <div style="float: left; width: 20%; height:100px; boarder-radius:50px;">
+                                        <a href="{{ asset('storage/' . $image) }}" data-lightbox="experience-gallery">
+                                            <img src="{{ asset('storage/' . $image) }}" alt="Gallery Image" class="modern-carousel__image" loading="lazy">
+                                        </a>
+                                    </div>
+                            @endforeach
+                        </div> --}}
+                    @endif            
 
                     @if($experience->good_to_know)
                         <div class="bg-[#f8f7f4] rounded-2xl p-8 mb-12">
@@ -186,3 +217,10 @@
     </section>
 </div>
 @endsection
+
+@section('js')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+@endsection
+
+
+

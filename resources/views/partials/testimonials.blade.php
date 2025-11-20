@@ -49,7 +49,6 @@ if (empty($reviews)) {
                 <article>
                     <blockquote>
                         <p>
-                            <span class="clip clip-left"></span>
                             {{ $review['text'] ?? '' }}
                         </p>
                     </blockquote>
@@ -83,14 +82,15 @@ if (empty($reviews)) {
         .testimonials .quotes > article{ grid-area:stack; transition:all .3s; margin-block-end:1rem; }
         .testimonials .clip{ height:100%; width:80px; float:left; display:block; }
     /* Make blockquote span fuller width and use rounded corners */
-    .testimonials blockquote{ margin-bottom:1rem; transition:transform .3s; transform: scale(var(--_scale,0)); display:block; }
-    .testimonials blockquote::before{ content:''; position:absolute; top:-1rem; left:-1rem; z-index:2; width:60px; height:60px; background-image: url('data:image/svg+xml,<svg fill="white" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M9.563 8.469l-0.813-1.25c-5.625 3.781-8.75 8.375-8.75 12.156 0 3.656 2.688 5.375 4.969 5.375 2.875 0 4.906-2.438 4.906-5 0-2.156-1.375-4-3.219-4.688-0.531-0.188-1.031-0.344-1.031-1.25 0-1.156 0.844-2.875 3.938-5.344zM21.969 8.469l-0.813-1.25c-5.563 3.781-8.75 8.375-8.75 12.156 0 3.656 2.75 5.375 5.031 5.375 2.906 0 4.969-2.438 4.969-5 0-2.156-1.406-4-3.313-4.688-0.531-0.188-1-0.344-1-1.25 0-1.156 0.875-2.875 3.875-5.344z"/></svg>'); background-repeat:no-repeat; opacity:var(--_opacity,0); transform:scale(var(--_scale,0)); }
-    .testimonials blockquote > p{ position:relative; display:block; font-weight:300; font-size:0.98rem; line-height:1.6; padding:1.25rem 1.5rem 1.5rem calc(80px + 1rem); background:var(--clr-secondary); color:var(--clr-primary); border-radius:14px; margin:0; width:100%; box-sizing:border-box; }
-        .testimonials .user{ display:flex; align-items:start; gap:1rem; justify-content:end; text-align:right; }
+    .testimonials blockquote{ transition:transform .3s; transform: scale(var(--_scale,0)); display:flex; }
+    .testimonials blockquote::before{ content:''; position:absolute;  left:1rem; z-index:1; width:40px; height:40px; background-image: url('data:image/svg+xml,<svg fill="white" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M9.563 8.469l-0.813-1.25c-5.625 3.781-8.75 8.375-8.75 12.156 0 3.656 2.688 5.375 4.969 5.375 2.875 0 4.906-2.438 4.906-5 0-2.156-1.375-4-3.219-4.688-0.531-0.188-1.031-0.344-1.031-1.25 0-1.156 0.844-2.875 3.938-5.344zM21.969 8.469l-0.813-1.25c-5.563 3.781-8.75 8.375-8.75 12.156 0 3.656 2.75 5.375 5.031 5.375 2.906 0 4.969-2.438 4.969-5 0-2.156-1.406-4-3.313-4.688-0.531-0.188-1-0.344-1-1.25 0-1.156 0.875-2.875 3.875-5.344z"/></svg>'); background-repeat:no-repeat; opacity:var(--_opacity,0); transform:scale(var(--_scale,0)); }
+    .testimonials blockquote > p{ position:relative;  text-align: center; display:flex;justify-content: center; align-items: center; font-weight:500; font-size:16px; line-height:1.6; padding:3rem; background:var(--clr-secondary); color:var(--clr-primary); border-radius:14px; margin:0; width:100%; box-sizing:border-box; }
+    .testimonials blockquote::after{ content:''; position:absolute;  right:1rem; z-index:1; bottom:0rem;  width:40px; height:40px; background-image: url('data:image/svg+xml,<svg fill="white" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M9.563 8.469l-0.813-1.25c-5.625 3.781-8.75 8.375-8.75 12.156 0 3.656 2.688 5.375 4.969 5.375 2.875 0 4.906-2.438 4.906-5 0-2.156-1.375-4-3.219-4.688-0.531-0.188-1.031-0.344-1.031-1.25 0-1.156 0.844-2.875 3.938-5.344zM21.969 8.469l-0.813-1.25c-5.563 3.781-8.75 8.375-8.75 12.156 0 3.656 2.75 5.375 5.031 5.375 2.906 0 4.969-2.438 4.969-5 0-2.156-1.406-4-3.313-4.688-0.531-0.188-1-0.344-1-1.25 0-1.156 0.875-2.875 3.875-5.344z"/></svg>'); background-repeat:no-repeat; opacity:var(--_opacity,0); transform:scale(var(--_scale,0))rotate(180deg); }
+        .testimonials .user{ display:flex; gap:1rem; justify-content:end; text-align:right;}
         .testimonials .user *{ opacity:var(--_opacity,0); transition:transform .3s, opacity .3s; transform:translateY(1rem); }
-        .testimonials .user p:first-child{ font-size:1.05rem; color:var(--clr-primary); text-transform:uppercase; letter-spacing:0.1rem; }
+        .testimonials .user p:first-child{ font-size:1.05rem; color:var(--clr-secondary); text-transform:uppercase; letter-spacing:0.1rem; }
         .testimonials .user p:last-child{ font-weight:300; font-size:.8rem; color:var(--clr-secondary); }
-        .testimonials .user img{ border-radius:4px; border:1px solid var(--clr-primary); width:56px; height:56px; object-fit:cover; transform:scale(var(--_scale,0)); }
+        .testimonials .user img{ border-radius:4px; border:1px solid var(--clr-primary); width:56px; height:56px;margin-top: 20px; object-fit:cover; transform:scale(var(--_scale,0)); }
         input[type=radio]:checked + article{ --_scale:1; --_opacity:1; }
         .testimonials .dots{ padding:.25rem .5rem; width:fit-content; margin-inline:auto; display:flex; gap:.5rem; justify-content:center; }
         .testimonials .dots > label{ border-radius:1rem; border:1px solid var(--clr-secondary); width:1.2rem; height:1.2rem; aspect-ratio:1; cursor:pointer; position:relative; }

@@ -71,50 +71,87 @@
                         @endforeach
                     </div>
                 </div> --}}
-                <div class="bg-white rounded-2xl border border-[#ecebe5] p-8 mb-12">
-                    <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-                            @foreach($experience->gallery ?? [] as $image)
-                                <div class="swiper-slide">
-                                    <a href="{{ asset('storage/' . $image) }}" data-lightbox="experience-gallery">
-                                        <img src="{{ asset('storage/' . $image) }}" alt="Gallery Image" class="h-48 md:h-60 w-64 object-cover rounded-lg">
-                                    </a>
-                                </div>
-                            @endforeach
+                <div class="bg-transparent rounded-2xl border border-[#ecebe5] p-8 mb-12">
+                    <div class="max-w-5xl mx-auto">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                @foreach($experience->gallery ?? [] as $image)
+                                    <div class="swiper-slide flex justify-center">
+                                        <a href="{{ asset('storage/' . $image) }}" data-lightbox="experience-gallery">
+                                            <img
+                                                src="{{ asset('storage/' . $image) }}"
+                                                alt="Gallery Image"
+                                                class="h-48 md:h-60 w-full max-w-xs md:max-w-sm object-cover rounded-lg"
+                                            >
+                                        </a>
+                                    </div>
+                                @endforeach
+                            </div>
                         </div>
-                        <div class="swiper-controller">
-                            <div class="slider-controller">
+
+                        <!-- Pagination + Arrows OUTSIDE the carousel -->
+                        <div class="mt-4 flex flex-col items-center gap-3">
+                            <!-- Dots -->
+                            <div class="swiper-pagination mySwiper-pagination"></div>
+
+                            <!-- Arrows -->
+                            <div class="slider-controller flex items-center gap-4">
                                 <div class="swiper-button-prev slider-arrow">
-                                    <span class="material-symbols-outlined icon ">
+                                    <span class="material-symbols-outlined icon">
+                                        chevron_left
                                     </span>
                                 </div>
 
                                 <div class="swiper-button-next slider-arrow">
                                     <span class="material-symbols-outlined icon">
+                                        chevron_right
                                     </span>
                                 </div>
-
-                                <div class="swiper-pagination"></div>
-
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <style>
+                    /* Make the dots behave like normal content, not overlay */
+                    .mySwiper-pagination {
+                        position: static !important;
+                        margin-top: 0.5rem;
+                    }
+
+                    /* Change pagination dots color to brown */
+                    .swiper-pagination-bullet {
+                        background-color: grey !important;
+                    }
+                    .swiper-pagination-bullet-active {
+                        background-color: #c86542 !important; /* Darker brown for active state */
+                    }
+                </style>
+
                 <script>
                     var swiper = new Swiper(".mySwiper", {
                         effect: "coverflow",
                         centeredSlides: true,
+                        loop: true,
                         autoplay: {
                             delay: 3000,
                             disableOnInteraction: false
                         },
-                        loop: true,
-                        slidesPerView: 2,
+                        slidesPerView: 1,
+                        spaceBetween: 24,
+                        breakpoints: {
+                            768: {   // md and up
+                                slidesPerView: 2
+                            },
+                            1024: {  // lg and up
+                                slidesPerView: 3
+                            }
+                        },
                         coverflowEffect: {
                             rotate: 0,
-                            stretch: 30,
+                            stretch: 50,
                             depth: 50,
-                            modifier: 7,
+                            modifier: 2,
                             slideShadows: false
                         },
                         navigation: {
@@ -123,10 +160,9 @@
                         },
                         pagination: {
                             el: ".swiper-pagination",
-                            clickable: false
+                            clickable: true
                         }
                     });
-
                 </script>
             @endif
 
@@ -250,7 +286,7 @@
                     </div>
 
                     <!-- Inquiry Card -->
-                    <div class="bg-gradient-to-br from-[#1b1b18] to-[#3c4c62] rounded-2xl p-6 text-white">
+                    <div class="bg-[#c86542] rounded-2xl p-6 text-white">
                         <div class="text-center mb-4">
                             <h4 class="text-lg font-semibold mb-2">Ready to Experience?</h4>
                             <p class="text-sm opacity-90">Contact us for pricing, availability, and to customize your experience.</p>

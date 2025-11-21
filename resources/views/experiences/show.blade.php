@@ -95,7 +95,7 @@
                             <div class="swiper-pagination mySwiper-pagination"></div>
 
                             <!-- Arrows -->
-                            <div class="slider-controller flex items-center gap-4">
+                            {{-- <div class="slider-controller flex items-center gap-4">
                                 <div class="swiper-button-prev slider-arrow">
                                     <span class="material-symbols-outlined icon">
                                         chevron_left
@@ -107,7 +107,7 @@
                                         chevron_right
                                     </span>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>

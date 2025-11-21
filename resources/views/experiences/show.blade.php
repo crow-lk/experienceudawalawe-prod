@@ -56,6 +56,79 @@
                     </div>
                 @endif
             </div>
+            <!-- Gallery Section -->
+            @if($experience->gallery && count($experience->gallery) > 0)
+                {{-- <div class="modern-carousel" data-carousel>
+                    <div class="modern-carousel__container" data-carousel-container>
+                        @foreach($experience->gallery ?? [] as $image)
+                            <div class="modern-carousel__card" data-carousel-card>
+                                <div class="modern-carousel__image-container">
+                                    <a href="{{ asset('storage/' . $image) }}" data-lightbox="experience-gallery">
+                                        <img src="{{ asset('storage/' . $image) }}" alt="Gallery Image" class="modern-carousel__image" loading="lazy">
+                                    </a>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div> --}}
+                <div class="bg-white rounded-2xl border border-[#ecebe5] p-8 mb-12">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            @foreach($experience->gallery ?? [] as $image)
+                                <div class="swiper-slide">
+                                    <a href="{{ asset('storage/' . $image) }}" data-lightbox="experience-gallery">
+                                        <img src="{{ asset('storage/' . $image) }}" alt="Gallery Image" class="h-48 md:h-60 w-64 object-cover rounded-lg">
+                                    </a>
+                                </div>
+                            @endforeach
+                        </div>
+                        <div class="swiper-controller">
+                            <div class="slider-controller">
+                                <div class="swiper-button-prev slider-arrow">
+                                    <span class="material-symbols-outlined icon ">
+                                    </span>
+                                </div>
+
+                                <div class="swiper-button-next slider-arrow">
+                                    <span class="material-symbols-outlined icon">
+                                    </span>
+                                </div>
+
+                                <div class="swiper-pagination"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    var swiper = new Swiper(".mySwiper", {
+                        effect: "coverflow",
+                        centeredSlides: true,
+                        autoplay: {
+                            delay: 3000,
+                            disableOnInteraction: false
+                        },
+                        loop: true,
+                        slidesPerView: 2,
+                        coverflowEffect: {
+                            rotate: 0,
+                            stretch: 30,
+                            depth: 50,
+                            modifier: 7,
+                            slideShadows: false
+                        },
+                        navigation: {
+                            prevEl: ".swiper-button-prev",
+                            nextEl: ".swiper-button-next"
+                        },
+                        pagination: {
+                            el: ".swiper-pagination",
+                            clickable: false
+                        }
+                    });
+
+                </script>
+            @endif
 
             <!-- Call to Action -->
             <div class="bg-white rounded-2xl border border-[#ecebe5] p-6">
@@ -105,79 +178,7 @@
                             </div>
                         </div>
                     @endif
-                    <!-- Gallery Section -->
-                    @if($experience->gallery && count($experience->gallery) > 0)
-                        {{-- <div class="modern-carousel" data-carousel>
-                            <div class="modern-carousel__container" data-carousel-container>
-                                @foreach($experience->gallery ?? [] as $image)
-                                    <div class="modern-carousel__card" data-carousel-card>
-                                        <div class="modern-carousel__image-container">
-                                            <a href="{{ asset('storage/' . $image) }}" data-lightbox="experience-gallery">
-                                                <img src="{{ asset('storage/' . $image) }}" alt="Gallery Image" class="modern-carousel__image" loading="lazy">
-                                            </a>
-                                        </div>
-                                    </div>
-                                @endforeach
-                            </div>
-                        </div> --}}
-                        <div class="bg-white rounded-2xl border border-[#ecebe5] p-8 mb-12">
-                            <div class="swiper mySwiper">
-                                <div class="swiper-wrapper">
-                                    @foreach($experience->gallery ?? [] as $image)
-                                        <div class="swiper-slide">
-                                            <a href="{{ asset('storage/' . $image) }}" data-lightbox="experience-gallery">
-                                                <img src="{{ asset('storage/' . $image) }}" alt="Gallery Image" class="h-48 md:h-60 w-64 object-cover rounded-lg">
-                                            </a>
-                                        </div>
-                                    @endforeach
-                                </div>
-                                <div class="swiper-controller">
-                                    <div class="slider-controller">
-                                        <div class="swiper-button-prev slider-arrow">
-                                            <span class="material-symbols-outlined icon ">
-                                            </span>
-                                        </div>
-
-                                        <div class="swiper-button-next slider-arrow">
-                                            <span class="material-symbols-outlined icon">
-                                            </span>
-                                        </div>
-
-                                        <div class="swiper-pagination"></div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <script>
-                            var swiper = new Swiper(".mySwiper", {
-                                effect: "coverflow",
-                                centeredSlides: true,
-                                autoplay: {
-                                    delay: 3000,
-                                    disableOnInteraction: false
-                                },
-                                loop: true,
-                                slidesPerView: 2,
-                                coverflowEffect: {
-                                    rotate: 0,
-                                    stretch: 30,
-                                    depth: 100,
-                                    modifier: 4,
-                                    slideShadows: true
-                                },
-                                navigation: {
-                                    prevEl: ".swiper-button-prev",
-                                    nextEl: ".swiper-button-next"
-                                },
-                                pagination: {
-                                    el: ".swiper-pagination",
-                                    clickable: false
-                                }
-                            });
-
-                        </script>
-                    @endif            
+                                
 
                     @if($experience->good_to_know)
                         <div class="bg-[#f8f7f4] rounded-2xl p-8 mb-12">
